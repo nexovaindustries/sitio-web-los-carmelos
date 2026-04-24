@@ -66,10 +66,13 @@ tailwind.config = {
 
   /* ── Nav ── */
   #main-nav { background: rgba(253,248,242,0.40); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border-bottom: 3px solid #C04000; }
-  #main-nav .nav-logo-img { height: 104px; }
+  #main-nav .nav-logo-img { height: 130px; }
   #main-nav .nav-link { color: #1a0a02; font-family: 'Noto Serif', serif; letter-spacing: .1em; text-transform: uppercase; font-size: .8rem; transition: color .2s; text-shadow: 0 1px 3px rgba(255,255,255,0.4); }
   #main-nav .nav-link:hover { color: #C04000; }
   #main-nav .nav-link.active { color: #C04000; border-bottom: 2px solid #C04000; padding-bottom: 2px; }
+
+  /* scroll offset for fixed nav */
+  #inicio, #herencia, #menu, #patio, #ubicacion { scroll-margin-top: 136px; }
 
   /* ── Gold divider ── */
   .gold-divider {
@@ -180,11 +183,6 @@ tailwind.config = {
       <a class="nav-link" href="#patio">El Patio</a>
       <a class="nav-link" href="#ubicacion">Ubicación</a>
     </div>
-    <a href="https://wa.me/51999999999" target="_blank"
-       class="flex items-center gap-2 bg-[#C04000] text-white font-label-sm px-5 py-2.5 rounded uppercase hover:bg-[#973100] transition-colors text-xs shadow">
-      <span class="material-symbols-outlined text-base">chat</span>
-      Reservar
-    </a>
   </div>
 </nav>
 
