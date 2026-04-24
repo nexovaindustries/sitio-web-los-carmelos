@@ -1,570 +1,597 @@
 <!DOCTYPE html>
-
-<html class="light" lang="es"><head>
+<html class="light" lang="es">
+<head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>Los Carmelos — Picantería Arequipeña</title>
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
 <link href="https://fonts.googleapis.com" rel="preconnect"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100..900;1,100..900&amp;family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100..900;1,100..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
 <script id="tailwind-config">
-        tailwind.config = {
-            darkMode: "class",
-            theme: {
-                extend: {
-                    "colors": {
-                        "tertiary-container": "#c5372c",
-                        "primary-fixed": "#ffdbcf",
-                        "primary-container": "#c04000",
-                        "tertiary-fixed": "#ffdad5",
-                        "surface-container-lowest": "#ffffff",
-                        "inverse-on-surface": "#f1f1f1",
-                        "on-secondary-container": "#745c00",
-                        "on-primary-container": "#ffe9e3",
-                        "surface-bright": "#f9f9f9",
-                        "secondary-container": "#fed65b",
-                        "inverse-surface": "#2f3131",
-                        "outline-variant": "#e1bfb4",
-                        "on-tertiary-fixed-variant": "#900d0b",
-                        "secondary": "#735c00",
-                        "on-tertiary-container": "#ffe9e5",
-                        "on-primary-fixed": "#380d00",
-                        "on-surface": "#1a1c1c",
-                        "error": "#ba1a1a",
-                        "on-tertiary": "#ffffff",
-                        "on-secondary-fixed-variant": "#574500",
-                        "outline": "#8d7167",
-                        "tertiary-fixed-dim": "#ffb4a9",
-                        "surface-tint": "#a93700",
-                        "surface-container": "#eeeeee",
-                        "surface-container-highest": "#e2e2e2",
-                        "surface-container-high": "#e8e8e8",
-                        "on-secondary": "#ffffff",
-                        "on-primary": "#ffffff",
-                        "background": "#f9f9f9",
-                        "surface-dim": "#dadada",
-                        "surface-container-low": "#f3f3f3",
-                        "secondary-fixed": "#ffe088",
-                        "primary-fixed-dim": "#ffb59b",
-                        "on-secondary-fixed": "#241a00",
-                        "secondary-fixed-dim": "#e9c349",
-                        "on-primary-fixed-variant": "#812800",
-                        "on-error": "#ffffff",
-                        "tertiary": "#a21d17",
-                        "error-container": "#ffdad6",
-                        "on-tertiary-fixed": "#410001",
-                        "on-surface-variant": "#594139",
-                        "inverse-primary": "#ffb59b",
-                        "surface-variant": "#e2e2e2",
-                        "on-error-container": "#93000a",
-                        "on-background": "#1a1c1c",
-                        "primary": "#973100",
-                        "surface": "#f9f9f9"
-                    },
-                    "borderRadius": {
-                        "DEFAULT": "0.125rem",
-                        "lg": "0.25rem",
-                        "xl": "0.5rem",
-                        "full": "0.75rem"
-                    },
-                    "spacing": {
-                        "section-gap": "80px",
-                        "container-max": "1280px",
-                        "unit": "8px",
-                        "margin-edge": "40px",
-                        "gutter": "24px"
-                    },
-                    "fontFamily": {
-                        "body-md": ["Plus Jakarta Sans"],
-                        "headline-lg": ["Noto Serif"],
-                        "label-sm": ["Plus Jakarta Sans"],
-                        "headline-xl": ["Noto Serif"],
-                        "headline-md": ["Noto Serif"],
-                        "body-lg": ["Plus Jakarta Sans"]
-                    },
-                    "fontSize": {
-                        "body-md": ["16px", { "lineHeight": "1.6", "fontWeight": "400" }],
-                        "headline-lg": ["36px", { "lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "600" }],
-                        "label-sm": ["12px", { "lineHeight": "1", "letterSpacing": "0.1em", "fontWeight": "600" }],
-                        "headline-xl": ["48px", { "lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700" }],
-                        "headline-md": ["24px", { "lineHeight": "1.3", "fontWeight": "600" }],
-                        "body-lg": ["18px", { "lineHeight": "1.6", "fontWeight": "400" }]
-                    }
-                }
-            }
-        }
-    </script>
+tailwind.config = {
+  darkMode: "class",
+  theme: {
+    extend: {
+      colors: {
+        "primary-container": "#c04000",
+        "secondary-container": "#fed65b",
+        "outline-variant": "#e1bfb4",
+        "secondary": "#735c00",
+        "on-primary-container": "#ffe9e3",
+        "on-surface": "#1a1c1c",
+        "on-surface-variant": "#594139",
+        "outline": "#8d7167",
+        "surface-container": "#eeeeee",
+        "surface-container-low": "#f3f3f3",
+        "on-primary": "#ffffff",
+        "primary": "#973100",
+        "surface": "#f9f9f9"
+      },
+      spacing: {
+        "section-gap": "80px",
+        "container-max": "1280px",
+        "margin-edge": "40px",
+      },
+      fontFamily: {
+        "body-md":    ["Plus Jakarta Sans"],
+        "headline-lg":["Noto Serif"],
+        "label-sm":   ["Plus Jakarta Sans"],
+        "headline-xl":["Noto Serif"],
+        "headline-md":["Noto Serif"],
+        "body-lg":    ["Plus Jakarta Sans"]
+      },
+      fontSize: {
+        "body-md":    ["16px",{"lineHeight":"1.6","fontWeight":"400"}],
+        "headline-lg":["36px",{"lineHeight":"1.2","letterSpacing":"-0.01em","fontWeight":"600"}],
+        "label-sm":   ["12px",{"lineHeight":"1","letterSpacing":"0.1em","fontWeight":"600"}],
+        "headline-xl":["48px",{"lineHeight":"1.1","letterSpacing":"-0.02em","fontWeight":"700"}],
+        "headline-md":["24px",{"lineHeight":"1.3","fontWeight":"600"}],
+        "body-lg":    ["18px",{"lineHeight":"1.6","fontWeight":"400"}]
+      }
+    }
+  }
+}
+</script>
 <style>
-        .material-symbols-outlined {
-            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
-        }
-        .material-symbols-outlined.filled {
-            font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
-        }
-        .texture-sillar {
-            background-color: #f9f9f9;
-            background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100' height='100' filter='url(%23noise)' opacity='0.03'/%3E%3C/svg%3E");
-        }
-        .arch-mask {
-            clip-path: polygon(0% 20%, 10% 5%, 50% 0%, 90% 5%, 100% 20%, 100% 100%, 0% 100%);
-        }
-        /* Accordion */
-        details summary { list-style: none; cursor: pointer; }
-        details summary::-webkit-details-marker { display: none; }
-        .accordion-chevron { transition: transform 0.3s ease; }
-        details[open] .accordion-chevron { transform: rotate(180deg); }
-        details .accordion-body {
-            overflow: hidden;
-            animation: slideDown 0.25s ease;
-        }
-        @keyframes slideDown {
-            from { opacity: 0; transform: translateY(-6px); }
-            to   { opacity: 1; transform: translateY(0); }
-        }
-        /* Nav */
-        #main-nav .nav-logo-img { height: 80px; }
-        #main-nav .nav-link { color: #594139; transition: color 0.2s; }
-        #main-nav .nav-link:hover { color: #C04000; }
-        #main-nav .nav-link.active { color: #C04000; border-bottom-color: #C04000; }
-    </style>
+  /* ── Base ── */
+  body {
+    background-color: #faf0e6;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23n)' opacity='0.045'/%3E%3C/svg%3E");
+  }
+
+  .material-symbols-outlined { font-variation-settings:'FILL' 0,'wght' 400,'GRAD' 0,'opsz' 24; }
+  .material-symbols-outlined.filled { font-variation-settings:'FILL' 1,'wght' 400,'GRAD' 0,'opsz' 24; }
+
+  /* ── Nav ── */
+  #main-nav { background: #fdf8f2; border-bottom: 3px solid #C04000; }
+  #main-nav .nav-logo-img { height: 80px; }
+  #main-nav .nav-link { color: #4a2010; font-family: 'Noto Serif', serif; letter-spacing: .1em; text-transform: uppercase; font-size: .8rem; transition: color .2s; }
+  #main-nav .nav-link:hover { color: #C04000; }
+  #main-nav .nav-link.active { color: #C04000; border-bottom: 2px solid #C04000; padding-bottom: 2px; }
+
+  /* ── Gold divider ── */
+  .gold-divider {
+    height: 3px;
+    background: linear-gradient(to right, transparent, #D4AF37 25%, #C04000 50%, #D4AF37 75%, transparent);
+  }
+
+  /* ── Herencia — sillar stone bg ── */
+  #herencia {
+    background-color: #f5e8d0;
+    background-image:
+      url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='56'%3E%3Crect x='0' y='0' width='60' height='27' fill='none' stroke='%23b8915a' stroke-width='0.6' opacity='0.22'/%3E%3Crect x='60' y='0' width='60' height='27' fill='none' stroke='%23b8915a' stroke-width='0.6' opacity='0.22'/%3E%3Crect x='-30' y='28' width='60' height='27' fill='none' stroke='%23b8915a' stroke-width='0.6' opacity='0.22'/%3E%3Crect x='30' y='28' width='60' height='27' fill='none' stroke='%23b8915a' stroke-width='0.6' opacity='0.22'/%3E%3Crect x='90' y='28' width='60' height='27' fill='none' stroke='%23b8915a' stroke-width='0.6' opacity='0.22'/%3E%3C/svg%3E");
+  }
+  .herencia-text-block { border-left: 4px solid #C04000; padding-left: 1.25rem; }
+
+  /* ── Menú — dark picantería wood ── */
+  #menu {
+    background-color: #2e0e04;
+    background-image:
+      url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='60' height='60'%3E%3Cpath d='M0 60 L60 0M-15 60 L45 0M15 60 L75 0' stroke='rgba(255,190,120,0.06)' stroke-width='1'/%3E%3C/svg%3E");
+  }
+  #menu .section-label { color: #D4AF37; }
+  #menu h2.section-title { color: #ffcfb0; }
+  #menu .gold-divider-sm { width: 64px; height: 1px; background: #D4AF37; opacity: .5; }
+
+  #menu details {
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,190,120,0.18);
+    border-radius: 2px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+  }
+  #menu details summary {
+    list-style: none; cursor: pointer;
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 1rem 1.5rem;
+    border-radius: 2px;
+    transition: background .2s;
+  }
+  #menu details summary::-webkit-details-marker { display: none; }
+  #menu details summary:hover { background: rgba(255,255,255,0.08); }
+  #menu details .cat-title { font-family: 'Noto Serif', serif; font-size: 1.1rem; font-weight: 600; color: #f5e9d9; }
+  #menu details .acc-chev { color: #D4AF37; transition: transform .3s; }
+  #menu details[open] .acc-chev { transform: rotate(180deg); }
+
+  #menu .acc-body {
+    border-top: 1px solid rgba(255,190,120,0.15);
+    padding: .25rem 1.5rem 1.25rem;
+    animation: slideDown .22s ease;
+  }
+  #menu .menu-row {
+    display: flex; justify-content: space-between; align-items: baseline;
+    padding: .6rem 0;
+    border-bottom: 1px solid rgba(255,190,120,0.09);
+  }
+  #menu .menu-row:last-child { border-bottom: none; }
+  #menu .item-name { font-size: .95rem; color: #e8d5c4; }
+  #menu .item-note { font-size: .72rem; color: rgba(255,255,255,0.38); }
+  #menu .item-price { font-size: .72rem; font-weight: 700; letter-spacing: .08em; color: #D4AF37; white-space: nowrap; margin-left: 1rem; }
+  #menu .item-soon { font-size: .72rem; font-weight: 600; letter-spacing: .08em; color: rgba(255,255,255,0.35); white-space: nowrap; margin-left: 1rem; }
+  #menu .sub-label { font-family: 'Plus Jakarta Sans', sans-serif; font-size: .68rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: #D4AF37; margin-top: .75rem; margin-bottom: .25rem; }
+
+  /* ── Patio ── */
+  #patio .patio-card { background: rgba(250,240,230,0.92); backdrop-filter: blur(16px); border-left: 5px solid #C04000; }
+
+  /* ── Ubicación ── */
+  #ubicacion {
+    background-color: #5e1e08;
+    background-image:
+      url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='48' height='48'%3E%3Cpolygon points='24,3 45,24 24,45 3,24' fill='none' stroke='rgba(255,200,140,0.09)' stroke-width='0.8'/%3E%3C/svg%3E");
+  }
+  #ubicacion .info-card {
+    background: rgba(255,255,255,0.07);
+    border: 1px solid rgba(255,200,140,0.2);
+    border-radius: 2px;
+  }
+  #ubicacion .icon-ring {
+    width: 3rem; height: 3rem; border-radius: 50%;
+    background: rgba(212,175,55,0.2);
+    display: flex; align-items: center; justify-content: center;
+    color: #D4AF37;
+  }
+
+  /* ── Footer ── */
+  footer { background: #1c0a02; }
+  footer a { color: rgba(245,233,217,.55); transition: color .2s; }
+  footer a:hover { color: #D4AF37; }
+
+  /* ── Shared accordion animation ── */
+  @keyframes slideDown {
+    from { opacity:0; transform:translateY(-5px); }
+    to   { opacity:1; transform:translateY(0); }
+  }
+</style>
 </head>
-<body class="bg-surface font-body-md text-on-surface antialiased texture-sillar">
-<!-- TopNavBar -->
-<nav class="fixed top-0 w-full z-50 bg-white border-b border-[#D4AF37]/30 shadow-sm" id="main-nav">
-<div class="flex justify-between items-center px-8 md:px-16 py-2 w-full max-w-container-max mx-auto">
-<a href="#" class="flex items-center">
-<img src="logo.png" alt="Los Carmelos" class="nav-logo-img" />
-</a>
-<div class="hidden md:flex items-center gap-8 font-serif tracking-widest uppercase text-sm">
-<a class="nav-link active border-b border-transparent pb-1" href="#menu">Menú</a>
-<a class="nav-link border-b border-transparent pb-1" href="#herencia">Nuestra Historia</a>
-<a class="nav-link border-b border-transparent pb-1" href="#patio">El Patio</a>
-<a class="nav-link border-b border-transparent pb-1" href="#ubicacion">Ubicación</a>
-</div>
-<a href="https://wa.me/51999999999" target="_blank" class="bg-primary-container text-on-primary-container font-label-sm px-5 py-2.5 rounded uppercase hover:bg-primary transition-colors text-xs flex items-center gap-2">
-<span class="material-symbols-outlined text-base">chat</span>
-Reservar
-</a>
-</div>
+
+<body class="font-body-md text-on-surface antialiased">
+
+<!-- ═══ NAV ═══ -->
+<nav class="fixed top-0 w-full z-50 shadow-md" id="main-nav">
+  <div class="flex justify-between items-center px-8 md:px-16 py-1 w-full max-w-[1280px] mx-auto">
+    <a href="#" class="flex items-center">
+      <img src="logo.png" alt="Los Carmelos" class="nav-logo-img"/>
+    </a>
+    <div class="hidden md:flex items-center gap-8">
+      <a class="nav-link active" href="#menu">Menú</a>
+      <a class="nav-link" href="#herencia">Nuestra Historia</a>
+      <a class="nav-link" href="#patio">El Patio</a>
+      <a class="nav-link" href="#ubicacion">Ubicación</a>
+    </div>
+    <a href="https://wa.me/51999999999" target="_blank"
+       class="flex items-center gap-2 bg-[#C04000] text-white font-label-sm px-5 py-2.5 rounded uppercase hover:bg-[#973100] transition-colors text-xs shadow">
+      <span class="material-symbols-outlined text-base">chat</span>
+      Reservar
+    </a>
+  </div>
 </nav>
-<!-- Hero Section -->
+
+<!-- ═══ HERO ═══ -->
 <header class="relative w-full h-screen flex items-center justify-center">
-<div class="absolute inset-0 z-0">
-<img alt="volcanic stone arch framing the Misti volcano, golden hour soft lighting, dramatic Arequipa landscape, highly detailed masonry" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCtXedkicR2zovzHBifoccall4JUHtRzweFkdILbC1UAB5aMVWsIScbqU8fOad3L04j-CiPim-iLXMApD0N09PQCzdKhGULweTOqrx2xPWxfHHLH58oN-xdldFs6wN-drXDXLIxAvlSJwgLuXRoPLLLFNlH1-HVDnkcnIBBA4zIpJ07qM_5YtF5lb3n7OTzezMXhvcMWz06VaeKp5vgUxi23r0SXhUdNFS6mH2Rn8gAdlH_GMWIzulRmkMnC9mmcdPvNRVErgdpccjc"/>
-<div class="absolute inset-0 bg-black/40"></div>
-</div>
-<div class="relative z-10 text-center px-4 max-w-4xl mx-auto flex flex-col items-center gap-6 pt-20">
-<h1 class="font-headline-xl text-on-primary text-5xl md:text-7xl drop-shadow-lg">Los Carmelos</h1>
-<p class="font-body-lg text-on-primary/90 text-xl md:text-2xl max-w-2xl font-light tracking-wide">El Auténtico Legado de la Picantería Arequipeña</p>
-<div class="flex flex-col sm:flex-row gap-4 mt-8">
-<a class="px-8 py-4 border border-secondary-container text-secondary-container font-label-sm uppercase hover:bg-secondary-container/10 transition-colors rounded backdrop-blur-sm" href="#menu">
-                    Ver Menú
-                </a>
-<a class="px-8 py-4 bg-primary-container text-on-primary-container font-label-sm uppercase hover:bg-primary transition-colors rounded shadow-lg" href="#ubicacion">
-                    Cómo Llegar
-                </a>
-</div>
-</div>
+  <div class="absolute inset-0 z-0">
+    <img alt="Arequipa colonial landscape" class="w-full h-full object-cover"
+         src="https://lh3.googleusercontent.com/aida-public/AB6AXuCtXedkicR2zovzHBifoccall4JUHtRzweFkdILbC1UAB5aMVWsIScbqU8fOad3L04j-CiPim-iLXMApD0N09PQCzdKhGULweTOqrx2xPWxfHHLH58oN-xdldFs6wN-drXDXLIxAvlSJwgLuXRoPLLLFNlH1-HVDnkcnIBBA4zIpJ07qM_5YtF5lb3n7OTzezMXhvcMWz06VaeKp5vgUxi23r0SXhUdNFS6mH2Rn8gAdlH_GMWIzulRmkMnC9mmcdPvNRVErgdpccjc"/>
+    <!-- Gradient: darker at top, warm amber vignette at bottom -->
+    <div class="absolute inset-0" style="background: linear-gradient(to bottom, rgba(30,8,2,0.55) 0%, rgba(0,0,0,0.25) 50%, rgba(60,20,5,0.65) 100%);"></div>
+  </div>
+  <div class="relative z-10 text-center px-4 max-w-4xl mx-auto flex flex-col items-center gap-6 pt-20">
+    <div class="mb-2">
+      <div class="text-[#D4AF37] font-label-sm tracking-[.3em] uppercase text-sm mb-3" style="font-family:'Plus Jakarta Sans',sans-serif;">✦ Tradición y Costumbres ✦</div>
+      <h1 class="font-headline-xl text-white text-6xl md:text-8xl drop-shadow-lg" style="font-family:'Noto Serif',serif; text-shadow:0 2px 24px rgba(0,0,0,0.6);">Los Carmelos</h1>
+    </div>
+    <p class="text-white/85 text-xl md:text-2xl max-w-2xl font-light tracking-wide" style="font-family:'Noto Serif',serif; font-style:italic;">El Auténtico Legado de la Picantería Arequipeña</p>
+    <!-- Gold rule -->
+    <div class="flex items-center gap-4 w-64">
+      <div class="flex-1 h-px bg-[#D4AF37]/60"></div>
+      <span class="text-[#D4AF37] text-lg">✦</span>
+      <div class="flex-1 h-px bg-[#D4AF37]/60"></div>
+    </div>
+    <div class="flex flex-col sm:flex-row gap-4 mt-2">
+      <a class="px-8 py-4 border-2 border-[#D4AF37] text-[#D4AF37] font-label-sm uppercase hover:bg-[#D4AF37]/10 transition-colors rounded backdrop-blur-sm tracking-widest" href="#menu">Ver Menú</a>
+      <a class="px-8 py-4 bg-[#C04000] text-white font-label-sm uppercase hover:bg-[#973100] transition-colors rounded shadow-lg tracking-widest" href="#ubicacion">Cómo Llegar</a>
+    </div>
+  </div>
 </header>
-<!-- Nuestra Herencia -->
-<section class="py-section-gap px-margin-edge max-w-container-max mx-auto" id="herencia">
-<div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-<div class="flex flex-col gap-8">
-<span class="font-label-sm text-secondary uppercase tracking-widest">Nuestra Herencia</span>
-<div class="flex flex-col gap-4">
-<h2 class="font-headline-lg text-on-surface">Misión</h2>
-<p class="font-body-md text-on-surface-variant">
-                    En Los Carmelos, nuestra misión es ofrecer una auténtica experiencia gastronómica arequipeña, trayendo los sabores tradicionales que nos han acompañado por generaciones. Nos comprometemos a brindar un servicio de excelencia con productos frescos y auténticos de Arequipa. Queremos que cada comida sea una verdadera celebración de nuestra rica herencia culinaria, haciendo sentir a nuestros clientes lo maravilloso que es Arequipa en cada bocado, con un servicio cálido y cercano que los haga sentir como en casa.
-                </p>
-</div>
-<div class="w-12 h-[1px] bg-outline-variant"></div>
-<div class="flex flex-col gap-4">
-<h2 class="font-headline-lg text-on-surface">Visión</h2>
-<p class="font-body-md text-on-surface-variant">
-                    Nuestra visión es ser el referente principal de la gastronomía arequipeña a nivel nacional e internacional, preservando y promoviendo las tradiciones culinarias de nuestra región. Aspiramos a inspirar a las nuevas generaciones para que valoren y mantengan viva nuestra herencia cultural, integrando innovación y autenticidad en cada experiencia gastronómica, destacándonos como un símbolo de identidad y orgullo arequipeño.
-                </p>
-</div>
-</div>
-<div class="relative h-[500px]">
-<img alt="rustic colonial interior of a traditional peruvian picanteria with stone walls, wooden tables, warm ambient lighting" class="w-full h-full object-cover rounded-sm shadow-md" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCNE5ddlz4p2VWyMLSwseFkSIkta7XdyuwEiad-TIfSMe_tJuks6ZcuGxTYx56VDtIqepXf-a0fiuyK7J917YLx9fVoGy0e6o9irsLIR3_li1Vw1nPAzL6G3lIlKnPynImoChpbAWhUbptIHPBF7eFzdS7YNpfgjrK1ug73hvU2nArcosERoB0eD9HXjqvdc_OsunGqt3sUYOaXfnVC2iZsLniXe0imSZEDv09itLowF9kVqO3Rt_8mpz_LDDo8ZY9zFZ1Ag8GfZ805"/>
-<div class="absolute -bottom-6 -left-6 w-32 h-32 bg-surface-container border border-outline-variant rounded flex items-center justify-center p-4 text-center">
-<span class="font-headline-md text-primary">Desde 1945</span>
-</div>
-</div>
-</div>
+
+<!-- Gold divider -->
+<div class="gold-divider"></div>
+
+<!-- ═══ HERENCIA ═══ -->
+<section class="py-section-gap px-margin-edge" id="herencia">
+  <div class="max-w-[1280px] mx-auto grid grid-cols-1 md:grid-cols-2 gap-14 items-center">
+
+    <div class="flex flex-col gap-8">
+      <div>
+        <span class="font-label-sm text-[#C04000] uppercase tracking-widest block mb-3">✦ Nuestra Herencia ✦</span>
+        <div class="herencia-text-block mb-6">
+          <h2 class="font-headline-lg text-[#2e0e04] mb-3" style="font-family:'Noto Serif',serif;">Misión</h2>
+          <p class="text-[#4a2010] leading-relaxed" style="font-size:.97rem;">
+            En Los Carmelos, nuestra misión es ofrecer una auténtica experiencia gastronómica arequipeña, trayendo los sabores tradicionales que nos han acompañado por generaciones. Nos comprometemos a brindar un servicio de excelencia con productos frescos y auténticos de Arequipa. Queremos que cada comida sea una verdadera celebración de nuestra rica herencia culinaria, haciendo sentir a nuestros clientes lo maravilloso que es Arequipa en cada bocado, con un servicio cálido y cercano que los haga sentir como en casa.
+          </p>
+        </div>
+        <div class="herencia-text-block">
+          <h2 class="font-headline-lg text-[#2e0e04] mb-3" style="font-family:'Noto Serif',serif;">Visión</h2>
+          <p class="text-[#4a2010] leading-relaxed" style="font-size:.97rem;">
+            Nuestra visión es ser el referente principal de la gastronomía arequipeña a nivel nacional e internacional, preservando y promoviendo las tradiciones culinarias de nuestra región. Aspiramos a inspirar a las nuevas generaciones para que valoren y mantengan viva nuestra herencia cultural, integrando innovación y autenticidad en cada experiencia gastronómica, destacándonos como un símbolo de identidad y orgullo arequipeño.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="relative h-[500px]">
+      <img alt="Interior de picantería arequipeña" class="w-full h-full object-cover rounded-sm shadow-xl"
+           style="border: 4px solid #C04000;"
+           src="https://lh3.googleusercontent.com/aida-public/AB6AXuCNE5ddlz4p2VWyMLSwseFkSIkta7XdyuwEiad-TIfSMe_tJuks6ZcuGxTYx56VDtIqepXf-a0fiuyK7J917YLx9fVoGy0e6o9irsLIR3_li1Vw1nPAzL6G3lIlKnPynImoChpbAWhUbptIHPBF7eFzdS7YNpfgjrK1ug73hvU2nArcosERoB0eD9HXjqvdc_OsunGqt3sUYOaXfnVC2iZsLniXe0imSZEDv09itLowF9kVqO3Rt_8mpz_LDDo8ZY9zFZ1Ag8GfZ805"/>
+      <div class="absolute -bottom-5 -left-5 w-36 h-36 flex items-center justify-center p-4 text-center shadow-lg"
+           style="background:#C04000; border:3px solid #D4AF37;">
+        <span style="font-family:'Noto Serif',serif; font-size:1.3rem; font-weight:700; color:#fff; line-height:1.3;">Desde<br/>1945</span>
+      </div>
+    </div>
+
+  </div>
 </section>
-<!-- Los Sabores de Antaño — Menú Desplegable -->
-<section class="py-section-gap px-margin-edge bg-surface-container-low border-y border-outline-variant/30" id="menu">
-<div class="max-w-container-max mx-auto">
-<div class="text-center mb-16 flex flex-col items-center gap-4">
-<span class="font-label-sm text-secondary uppercase tracking-widest">Especialidades</span>
-<h2 class="font-headline-lg text-primary">Los Sabores de Antaño</h2>
-<div class="w-16 h-[1px] bg-secondary-container"></div>
-</div>
 
-<div class="flex flex-col gap-3 max-w-3xl mx-auto">
+<!-- Gold divider -->
+<div class="gold-divider"></div>
 
-<!-- ENTRADAS Y SOPAS -->
-<details class="bg-surface border border-outline/20 rounded shadow-sm">
-<summary class="flex items-center justify-between px-6 py-4 select-none hover:bg-surface-container-low transition-colors rounded">
-<span class="font-headline-md text-on-surface text-lg">Entradas y Sopas</span>
-<span class="material-symbols-outlined accordion-chevron text-primary">expand_more</span>
-</summary>
-<div class="accordion-body px-6 pb-5 pt-1 border-t border-outline-variant/30">
-<div class="flex flex-col divide-y divide-outline-variant/20">
-<div class="flex justify-between items-baseline py-3"><span class="font-body-md text-on-surface">Tamal Arequipeño</span><span class="font-label-sm text-outline shrink-0 ml-4">muy pronto</span></div>
-<div class="flex justify-between items-baseline py-3"><span class="font-body-md text-on-surface">Escribano Arequipeño</span><span class="font-label-sm text-outline shrink-0 ml-4">muy pronto</span></div>
-<div class="flex justify-between items-baseline py-3"><span class="font-body-md text-on-surface">Choclo con Queso</span><span class="font-label-sm text-primary shrink-0 ml-4">S/ 12.00</span></div>
-<div class="flex justify-between items-baseline py-3"><span class="font-body-md text-on-surface">Torrejitas de Acelga o Lacayote <span class="text-xs text-outline">(fin de semana)</span></span><span class="font-label-sm text-primary shrink-0 ml-4">S/ 15.90</span></div>
-<div class="flex justify-between items-baseline py-3"><span class="font-body-md text-on-surface">Ocopa Arequipeña <span class="text-xs text-outline">(fin de semana)</span></span><span class="font-label-sm text-primary shrink-0 ml-4">S/ 18.90</span></div>
-<div class="flex justify-between items-baseline py-3"><span class="font-body-md text-on-surface">Soltero de Queso <span class="text-xs text-outline">(fin de semana)</span></span><span class="font-label-sm text-primary shrink-0 ml-4">S/ 18.90</span></div>
-<div class="flex justify-between items-baseline py-3"><span class="font-body-md text-on-surface">Caldo de Lomo</span><span class="font-label-sm text-primary shrink-0 ml-4">S/ 25.90</span></div>
-</div>
-</div>
-</details>
+<!-- ═══ MENÚ ═══ -->
+<section class="py-section-gap px-margin-edge" id="menu">
+  <div class="max-w-[1280px] mx-auto">
 
-<!-- PICANTERÍA -->
-<details class="bg-surface border border-outline/20 rounded shadow-sm">
-<summary class="flex items-center justify-between px-6 py-4 select-none hover:bg-surface-container-low transition-colors rounded">
-<span class="font-headline-md text-on-surface text-lg">Picantería</span>
-<span class="material-symbols-outlined accordion-chevron text-primary">expand_more</span>
-</summary>
-<div class="accordion-body px-6 pb-5 pt-1 border-t border-outline-variant/30">
-<div class="flex flex-col divide-y divide-outline-variant/20">
-<div class="flex justify-between items-baseline py-3"><span class="font-body-md text-on-surface">Rocoto Relleno con Pastel de Papa</span><span class="font-label-sm text-primary shrink-0 ml-4">S/ 31.90</span></div>
-<div class="flex justify-between items-baseline py-3"><span class="font-body-md text-on-surface">Chicharrón Entero</span><span class="font-label-sm text-primary shrink-0 ml-4">S/ 40.90</span></div>
-<div class="flex justify-between items-baseline py-3"><span class="font-body-md text-on-surface">Medio Chicharrón</span><span class="font-label-sm text-primary shrink-0 ml-4">S/ 25.90</span></div>
-<div class="flex justify-between items-baseline py-3"><span class="font-body-md text-on-surface">Costillar Dorado</span><span class="font-label-sm text-primary shrink-0 ml-4">S/ 43.90</span></div>
-<div class="flex justify-between items-baseline py-3"><span class="font-body-md text-on-surface">Sencca</span><span class="font-label-sm text-primary shrink-0 ml-4">S/ 18.90</span></div>
-<div class="flex justify-between items-baseline py-3"><span class="font-body-md text-on-surface">Adobo Arequipeño</span><span class="font-label-sm text-primary shrink-0 ml-4">S/ 22.00</span></div>
-<div class="flex justify-between items-baseline py-3"><span class="font-body-md text-on-surface">Sencca con Chicharrón</span><span class="font-label-sm text-primary shrink-0 ml-4">S/ 49.90</span></div>
-<div class="flex justify-between items-baseline py-3"><span class="font-body-md text-on-surface">Doble</span><span class="font-label-sm text-primary shrink-0 ml-4">S/ 49.90</span></div>
-<div class="flex justify-between items-baseline py-3"><span class="font-body-md text-on-surface">Triple</span><span class="font-label-sm text-primary shrink-0 ml-4">S/ 67.90</span></div>
-<div class="flex justify-between items-baseline py-3"><span class="font-body-md text-on-surface">Cuy Chactado</span><span class="font-label-sm text-primary shrink-0 ml-4">S/ 60.00</span></div>
-<div class="flex justify-between items-baseline py-3"><span class="font-body-md text-on-surface">Ají de Calabaza <span class="text-xs text-outline">(fin de semana)</span></span><span class="font-label-sm text-primary shrink-0 ml-4">S/ 14.90</span></div>
-<div class="flex justify-between items-baseline py-3"><span class="font-body-md text-on-surface">Locro de Pecho <span class="text-xs text-outline">(fin de semana)</span></span><span class="font-label-sm text-primary shrink-0 ml-4">S/ 22.90</span></div>
-</div>
-</div>
-</details>
+    <div class="text-center mb-14 flex flex-col items-center gap-4">
+      <span class="section-label font-label-sm uppercase tracking-widest">✦ Especialidades ✦</span>
+      <h2 class="section-title font-headline-lg" style="font-family:'Noto Serif',serif;">Los Sabores de Antaño</h2>
+      <div class="gold-divider-sm"></div>
+    </div>
 
-<!-- PARRILLAS -->
-<details class="bg-surface border border-outline/20 rounded shadow-sm">
-<summary class="flex items-center justify-between px-6 py-4 select-none hover:bg-surface-container-low transition-colors rounded">
-<span class="font-headline-md text-on-surface text-lg">Parrillas</span>
-<span class="material-symbols-outlined accordion-chevron text-primary">expand_more</span>
-</summary>
-<div class="accordion-body px-6 pb-5 pt-1 border-t border-outline-variant/30">
-<div class="flex flex-col divide-y divide-outline-variant/20">
-<div class="flex justify-between items-baseline py-3"><span class="font-body-md text-on-surface">Choclo con Queso Grillado</span><span class="font-label-sm text-primary shrink-0 ml-4">S/ 12.50</span></div>
-<div class="flex justify-between items-baseline py-3"><span class="font-body-md text-on-surface">Anticucho a lo Don Carmelo</span><span class="font-label-sm text-primary shrink-0 ml-4">S/ 32.00</span></div>
-<div class="flex justify-between items-baseline py-3"><span class="font-body-md text-on-surface">½ Anticucho</span><span class="font-label-sm text-primary shrink-0 ml-4">S/ 19.50</span></div>
-<div class="flex justify-between items-baseline py-3"><span class="font-body-md text-on-surface">Caparina</span><span class="font-label-sm text-primary shrink-0 ml-4">S/ 21.50</span></div>
-<div class="flex justify-between items-baseline py-3"><span class="font-body-md text-on-surface">Caparina con Anticucho</span><span class="font-label-sm text-primary shrink-0 ml-4">S/ 33.00</span></div>
-<div class="flex justify-between items-baseline py-3"><span class="font-body-md text-on-surface">Filete de Pollo 350gr</span><span class="font-label-sm text-primary shrink-0 ml-4">S/ 29.00</span></div>
-<div class="flex justify-between items-baseline py-3"><span class="font-body-md text-on-surface">Chuleta de Res 350gr</span><span class="font-label-sm text-primary shrink-0 ml-4">S/ 34.00</span></div>
-</div>
-</div>
-</details>
+    <div class="flex flex-col gap-2 max-w-3xl mx-auto">
 
-<!-- DESAYUNOS Y SANDWICHES -->
-<details class="bg-surface border border-outline/20 rounded shadow-sm">
-<summary class="flex items-center justify-between px-6 py-4 select-none hover:bg-surface-container-low transition-colors rounded">
-<span class="font-headline-md text-on-surface text-lg">Desayunos y Sándwiches Especiales</span>
-<span class="material-symbols-outlined accordion-chevron text-primary">expand_more</span>
-</summary>
-<div class="accordion-body px-6 pb-5 pt-1 border-t border-outline-variant/30">
-<div class="flex flex-col divide-y divide-outline-variant/20">
-<div class="flex justify-between items-baseline py-3"><span class="font-body-md text-on-surface">Bisteck</span><span class="font-label-sm text-primary shrink-0 ml-4">S/ 18.00</span></div>
-<div class="flex justify-between items-baseline py-3"><span class="font-body-md text-on-surface">Lomo Saltado</span><span class="font-label-sm text-primary shrink-0 ml-4">S/ 18.00</span></div>
-<div class="flex justify-between items-baseline py-3"><span class="font-body-md text-on-surface">Chicharrón de Chancho</span><span class="font-label-sm text-primary shrink-0 ml-4">S/ 15.00</span></div>
-<div class="flex justify-between items-baseline py-3"><span class="font-body-md text-on-surface">Hamburguesa de la Casa</span><span class="font-label-sm text-primary shrink-0 ml-4">S/ 19.00</span></div>
-<div class="flex justify-between items-baseline py-3"><span class="font-body-md text-on-surface">Chirraron a la Caja China</span><span class="font-label-sm text-outline shrink-0 ml-4">precio por confirmar</span></div>
-<div class="flex justify-between items-baseline py-3"><span class="font-body-md text-on-surface">Salchicha AQP</span><span class="font-label-sm text-outline shrink-0 ml-4">precio por confirmar</span></div>
-<div class="flex justify-between items-baseline py-3"><span class="font-body-md text-on-surface">Chorizo</span><span class="font-label-sm text-primary shrink-0 ml-4">S/ 9.00</span></div>
-<div class="flex justify-between items-baseline py-3"><span class="font-body-md text-on-surface">Pollo Desmenuzado</span><span class="font-label-sm text-primary shrink-0 ml-4">S/ 10.00</span></div>
-<div class="flex justify-between items-baseline py-3"><span class="font-body-md text-on-surface">Cabeza de Chancho</span><span class="font-label-sm text-outline shrink-0 ml-4">muy pronto</span></div>
-</div>
-</div>
-</details>
+      <!-- ENTRADAS Y SOPAS -->
+      <details>
+        <summary><span class="cat-title">Entradas y Sopas</span><span class="material-symbols-outlined acc-chev">expand_more</span></summary>
+        <div class="acc-body">
+          <div class="menu-row"><span class="item-name">Tamal Arequipeño</span><span class="item-soon">muy pronto</span></div>
+          <div class="menu-row"><span class="item-name">Escribano Arequipeño</span><span class="item-soon">muy pronto</span></div>
+          <div class="menu-row"><span class="item-name">Choclo con Queso</span><span class="item-price">S/ 12.00</span></div>
+          <div class="menu-row"><span class="item-name">Torrejitas de Acelga o Lacayote <span class="item-note">(fin de semana)</span></span><span class="item-price">S/ 15.90</span></div>
+          <div class="menu-row"><span class="item-name">Ocopa Arequipeña <span class="item-note">(fin de semana)</span></span><span class="item-price">S/ 18.90</span></div>
+          <div class="menu-row"><span class="item-name">Soltero de Queso <span class="item-note">(fin de semana)</span></span><span class="item-price">S/ 18.90</span></div>
+          <div class="menu-row"><span class="item-name">Caldo de Lomo</span><span class="item-price">S/ 25.90</span></div>
+        </div>
+      </details>
 
-<!-- PLATOS DEL DÍA -->
-<details class="bg-surface border border-outline/20 rounded shadow-sm">
-<summary class="flex items-center justify-between px-6 py-4 select-none hover:bg-surface-container-low transition-colors rounded">
-<span class="font-headline-md text-on-surface text-lg">Platos del Día</span>
-<span class="material-symbols-outlined accordion-chevron text-primary">expand_more</span>
-</summary>
-<div class="accordion-body px-6 pb-5 pt-1 border-t border-outline-variant/30">
-<div class="flex flex-col divide-y divide-outline-variant/20">
-<div class="flex justify-between items-baseline py-3"><span class="font-body-md text-on-surface">Bistec</span><span class="font-label-sm text-primary shrink-0 ml-4">S/ 20.00</span></div>
-<div class="flex justify-between items-baseline py-3"><span class="font-body-md text-on-surface">Bistec a lo Pobre</span><span class="font-label-sm text-primary shrink-0 ml-4">S/ 25.00</span></div>
-<div class="flex justify-between items-baseline py-3"><span class="font-body-md text-on-surface">Lomo Saltado</span><span class="font-label-sm text-primary shrink-0 ml-4">S/ 25.00</span></div>
-<div class="flex justify-between items-baseline py-3"><span class="font-body-md text-on-surface">Arroz a la Cubana</span><span class="font-label-sm text-primary shrink-0 ml-4">S/ 14.00</span></div>
-<div class="flex justify-between items-baseline py-3"><span class="font-body-md text-on-surface">Sopa de Pollo</span><span class="font-label-sm text-outline shrink-0 ml-4">muy pronto</span></div>
-<div class="flex justify-between items-baseline py-3"><span class="font-body-md text-on-surface">Empanadas</span><span class="font-label-sm text-primary shrink-0 ml-4">S/ 6.00</span></div>
-</div>
-</div>
-</details>
+      <!-- PICANTERÍA -->
+      <details>
+        <summary><span class="cat-title">Picantería</span><span class="material-symbols-outlined acc-chev">expand_more</span></summary>
+        <div class="acc-body">
+          <div class="menu-row"><span class="item-name">Rocoto Relleno con Pastel de Papa</span><span class="item-price">S/ 31.90</span></div>
+          <div class="menu-row"><span class="item-name">Chicharrón Entero</span><span class="item-price">S/ 40.90</span></div>
+          <div class="menu-row"><span class="item-name">Medio Chicharrón</span><span class="item-price">S/ 25.90</span></div>
+          <div class="menu-row"><span class="item-name">Costillar Dorado</span><span class="item-price">S/ 43.90</span></div>
+          <div class="menu-row"><span class="item-name">Sencca</span><span class="item-price">S/ 18.90</span></div>
+          <div class="menu-row"><span class="item-name">Adobo Arequipeño</span><span class="item-price">S/ 22.00</span></div>
+          <div class="menu-row"><span class="item-name">Sencca con Chicharrón</span><span class="item-price">S/ 49.90</span></div>
+          <div class="menu-row"><span class="item-name">Doble</span><span class="item-price">S/ 49.90</span></div>
+          <div class="menu-row"><span class="item-name">Triple</span><span class="item-price">S/ 67.90</span></div>
+          <div class="menu-row"><span class="item-name">Cuy Chactado</span><span class="item-price">S/ 60.00</span></div>
+          <div class="menu-row"><span class="item-name">Ají de Calabaza <span class="item-note">(fin de semana)</span></span><span class="item-price">S/ 14.90</span></div>
+          <div class="menu-row"><span class="item-name">Locro de Pecho <span class="item-note">(fin de semana)</span></span><span class="item-price">S/ 22.90</span></div>
+        </div>
+      </details>
 
-<!-- BUÑUELOS Y PICARONES -->
-<details class="bg-surface border border-outline/20 rounded shadow-sm">
-<summary class="flex items-center justify-between px-6 py-4 select-none hover:bg-surface-container-low transition-colors rounded">
-<span class="font-headline-md text-on-surface text-lg">Buñuelos y Picarones</span>
-<span class="material-symbols-outlined accordion-chevron text-primary">expand_more</span>
-</summary>
-<div class="accordion-body px-6 pb-5 pt-1 border-t border-outline-variant/30">
-<div class="flex flex-col divide-y divide-outline-variant/20">
-<div class="flex justify-between items-baseline py-3"><span class="font-body-md text-on-surface">Buñuelos</span><span class="font-label-sm text-primary shrink-0 ml-4">S/ 9.50</span></div>
-<div class="flex justify-between items-baseline py-3"><span class="font-body-md text-on-surface">Picarones</span><span class="font-label-sm text-primary shrink-0 ml-4">S/ 9.50</span></div>
-<div class="flex justify-between items-baseline py-3"><span class="font-body-md text-on-surface">Mixto</span><span class="font-label-sm text-primary shrink-0 ml-4">S/ 9.50</span></div>
-<div class="flex justify-between items-baseline py-3"><span class="font-body-md text-on-surface">Picarones Bebé</span><span class="font-label-sm text-primary shrink-0 ml-4">S/ 11.50</span></div>
-<div class="flex justify-between items-baseline py-3"><span class="font-body-md text-on-surface">Buñuelos Bebé</span><span class="font-label-sm text-primary shrink-0 ml-4">S/ 11.50</span></div>
-<div class="flex justify-between items-baseline py-3"><span class="font-body-md text-on-surface">Mixto Bebé</span><span class="font-label-sm text-primary shrink-0 ml-4">S/ 11.50</span></div>
-<div class="flex justify-between items-baseline py-3"><span class="font-body-md text-on-surface">Buñuelos de Maíz Morado <span class="text-xs text-outline">(vie–dom)</span></span><span class="font-label-sm text-primary shrink-0 ml-4">S/ 9.50</span></div>
-<div class="flex justify-between items-baseline py-3"><span class="font-body-md text-on-surface">Buñuelos de Quinua <span class="text-xs text-outline">(muy pronto · vie–dom)</span></span><span class="font-label-sm text-outline shrink-0 ml-4">—</span></div>
-<div class="flex justify-between items-baseline py-3"><span class="font-body-md text-on-surface">Buñuelos de Lacayote <span class="text-xs text-outline">(muy pronto · vie–dom)</span></span><span class="font-label-sm text-outline shrink-0 ml-4">—</span></div>
-<div class="flex justify-between items-baseline py-3"><span class="font-body-md text-on-surface">Dulce Carmelo <span class="text-xs text-outline">(vie–dom)</span></span><span class="font-label-sm text-primary shrink-0 ml-4">S/ 12.00</span></div>
-</div>
-</div>
-</details>
+      <!-- PARRILLAS -->
+      <details>
+        <summary><span class="cat-title">Parrillas</span><span class="material-symbols-outlined acc-chev">expand_more</span></summary>
+        <div class="acc-body">
+          <div class="menu-row"><span class="item-name">Choclo con Queso Grillado</span><span class="item-price">S/ 12.50</span></div>
+          <div class="menu-row"><span class="item-name">Anticucho a lo Don Carmelo</span><span class="item-price">S/ 32.00</span></div>
+          <div class="menu-row"><span class="item-name">½ Anticucho</span><span class="item-price">S/ 19.50</span></div>
+          <div class="menu-row"><span class="item-name">Caparina</span><span class="item-price">S/ 21.50</span></div>
+          <div class="menu-row"><span class="item-name">Caparina con Anticucho</span><span class="item-price">S/ 33.00</span></div>
+          <div class="menu-row"><span class="item-name">Filete de Pollo 350gr</span><span class="item-price">S/ 29.00</span></div>
+          <div class="menu-row"><span class="item-name">Chuleta de Res 350gr</span><span class="item-price">S/ 34.00</span></div>
+        </div>
+      </details>
 
-<!-- COMBOS -->
-<details class="bg-surface border border-outline/20 rounded shadow-sm">
-<summary class="flex items-center justify-between px-6 py-4 select-none hover:bg-surface-container-low transition-colors rounded">
-<span class="font-headline-md text-on-surface text-lg">Combos</span>
-<span class="material-symbols-outlined accordion-chevron text-primary">expand_more</span>
-</summary>
-<div class="accordion-body px-6 pb-5 pt-1 border-t border-outline-variant/30">
-<div class="flex flex-col divide-y divide-outline-variant/20">
-<div class="flex justify-between items-baseline py-3"><span class="font-body-md text-on-surface">Anticuchero 1</span><span class="font-label-sm text-primary shrink-0 ml-4">S/ 37.00</span></div>
-<div class="flex justify-between items-baseline py-3"><span class="font-body-md text-on-surface">Anticuchero 2</span><span class="font-label-sm text-primary shrink-0 ml-4">S/ 46.00</span></div>
-<div class="flex justify-between items-baseline py-3"><span class="font-body-md text-on-surface">Anticuchero 3</span><span class="font-label-sm text-primary shrink-0 ml-4">S/ 45.00</span></div>
-<div class="flex justify-between items-baseline py-3"><span class="font-body-md text-on-surface">Anticuchero 4</span><span class="font-label-sm text-primary shrink-0 ml-4">S/ 49.90</span></div>
-<div class="flex justify-between items-baseline py-3"><span class="font-body-md text-on-surface">Chacarero 1</span><span class="font-label-sm text-primary shrink-0 ml-4">S/ 54.90</span></div>
-<div class="flex justify-between items-baseline py-3"><span class="font-body-md text-on-surface">Chacarero 2</span><span class="font-label-sm text-outline shrink-0 ml-4">precio por confirmar</span></div>
-<div class="flex justify-between items-baseline py-3"><span class="font-body-md text-on-surface">Chacarero 3</span><span class="font-label-sm text-outline shrink-0 ml-4">precio por confirmar</span></div>
-<div class="flex justify-between items-baseline py-3"><span class="font-body-md text-on-surface">Especial Los Carmelos <span class="text-xs text-outline">(3 personas)</span></span><span class="font-label-sm text-primary shrink-0 ml-4">S/ 115.00</span></div>
-<div class="flex justify-between items-baseline py-3"><span class="font-body-md text-on-surface">Los Carmelos Fest <span class="text-xs text-outline">(5 personas)</span></span><span class="font-label-sm text-primary shrink-0 ml-4">S/ 145.00</span></div>
-</div>
-</div>
-</details>
+      <!-- DESAYUNOS Y SÁNDWICHES -->
+      <details>
+        <summary><span class="cat-title">Desayunos y Sándwiches Especiales</span><span class="material-symbols-outlined acc-chev">expand_more</span></summary>
+        <div class="acc-body">
+          <div class="menu-row"><span class="item-name">Bisteck</span><span class="item-price">S/ 18.00</span></div>
+          <div class="menu-row"><span class="item-name">Lomo Saltado</span><span class="item-price">S/ 18.00</span></div>
+          <div class="menu-row"><span class="item-name">Chicharrón de Chancho</span><span class="item-price">S/ 15.00</span></div>
+          <div class="menu-row"><span class="item-name">Hamburguesa de la Casa</span><span class="item-price">S/ 19.00</span></div>
+          <div class="menu-row"><span class="item-name">Chirraron a la Caja China</span><span class="item-soon">precio por confirmar</span></div>
+          <div class="menu-row"><span class="item-name">Salchicha AQP</span><span class="item-soon">precio por confirmar</span></div>
+          <div class="menu-row"><span class="item-name">Chorizo</span><span class="item-price">S/ 9.00</span></div>
+          <div class="menu-row"><span class="item-name">Pollo Desmenuzado</span><span class="item-price">S/ 10.00</span></div>
+          <div class="menu-row"><span class="item-name">Cabeza de Chancho</span><span class="item-soon">muy pronto</span></div>
+        </div>
+      </details>
 
-<!-- BEBIDAS CALIENTES -->
-<details class="bg-surface border border-outline/20 rounded shadow-sm">
-<summary class="flex items-center justify-between px-6 py-4 select-none hover:bg-surface-container-low transition-colors rounded">
-<span class="font-headline-md text-on-surface text-lg">Bebidas Calientes</span>
-<span class="material-symbols-outlined accordion-chevron text-primary">expand_more</span>
-</summary>
-<div class="accordion-body px-6 pb-5 pt-1 border-t border-outline-variant/30">
-<div class="flex flex-col divide-y divide-outline-variant/20">
-<div class="flex justify-between items-baseline py-3"><span class="font-body-md text-on-surface">Ponche de Cacao <span class="text-xs text-outline">(taza / 1L)</span></span><span class="font-label-sm text-primary shrink-0 ml-4">S/ 5.50 / S/ 17.90</span></div>
-<div class="flex justify-between items-baseline py-3"><span class="font-body-md text-on-surface">Diana de Almendra <span class="text-xs text-outline">(taza / 1L)</span></span><span class="font-label-sm text-primary shrink-0 ml-4">S/ 8.00 / S/ 26.90</span></div>
-<div class="flex justify-between items-baseline py-3"><span class="font-body-md text-on-surface">Emoliente <span class="text-xs text-outline">(taza / 1L)</span></span><span class="font-label-sm text-primary shrink-0 ml-4">S/ 5.50 / S/ 18.90</span></div>
-<div class="flex justify-between items-baseline py-3"><span class="font-body-md text-on-surface">Café Exprés</span><span class="font-label-sm text-primary shrink-0 ml-4">S/ 6.00</span></div>
-<div class="flex justify-between items-baseline py-3"><span class="font-body-md text-on-surface">Café Americano</span><span class="font-label-sm text-primary shrink-0 ml-4">S/ 8.00</span></div>
-<div class="flex justify-between items-baseline py-3"><span class="font-body-md text-on-surface">Cappuccino</span><span class="font-label-sm text-primary shrink-0 ml-4">S/ 10.00</span></div>
-<div class="flex justify-between items-baseline py-3"><span class="font-body-md text-on-surface">Té con Papaya Arequipeña</span><span class="font-label-sm text-primary shrink-0 ml-4">S/ 5.00</span></div>
-<div class="flex justify-between items-baseline py-3"><span class="font-body-md text-on-surface">Shot de Anisado</span><span class="font-label-sm text-primary shrink-0 ml-4">S/ 2.50</span></div>
-<div class="flex justify-between items-baseline py-3"><span class="font-body-md text-on-surface">Shot de Anisado Frutos Rojos</span><span class="font-label-sm text-primary shrink-0 ml-4">S/ 4.00</span></div>
-<div class="flex justify-between items-baseline py-3"><span class="font-body-md text-on-surface">Infusiones</span><span class="font-label-sm text-primary shrink-0 ml-4">S/ 5.00</span></div>
-</div>
-</div>
-</details>
+      <!-- PLATOS DEL DÍA -->
+      <details>
+        <summary><span class="cat-title">Platos del Día</span><span class="material-symbols-outlined acc-chev">expand_more</span></summary>
+        <div class="acc-body">
+          <div class="menu-row"><span class="item-name">Bistec</span><span class="item-price">S/ 20.00</span></div>
+          <div class="menu-row"><span class="item-name">Bistec a lo Pobre</span><span class="item-price">S/ 25.00</span></div>
+          <div class="menu-row"><span class="item-name">Lomo Saltado</span><span class="item-price">S/ 25.00</span></div>
+          <div class="menu-row"><span class="item-name">Arroz a la Cubana</span><span class="item-price">S/ 14.00</span></div>
+          <div class="menu-row"><span class="item-name">Sopa de Pollo</span><span class="item-soon">muy pronto</span></div>
+          <div class="menu-row"><span class="item-name">Empanadas</span><span class="item-price">S/ 6.00</span></div>
+        </div>
+      </details>
 
-<!-- BEBIDAS FRÍAS -->
-<details class="bg-surface border border-outline/20 rounded shadow-sm">
-<summary class="flex items-center justify-between px-6 py-4 select-none hover:bg-surface-container-low transition-colors rounded">
-<span class="font-headline-md text-on-surface text-lg">Bebidas Frías</span>
-<span class="material-symbols-outlined accordion-chevron text-primary">expand_more</span>
-</summary>
-<div class="accordion-body px-6 pb-5 pt-1 border-t border-outline-variant/30">
-<div class="flex flex-col divide-y divide-outline-variant/20">
-<div class="flex justify-between items-baseline py-3"><span class="font-body-md text-on-surface">Limonada <span class="text-xs text-outline">(vaso / 1L)</span></span><span class="font-label-sm text-primary shrink-0 ml-4">S/ 9.00 / S/ 18.00</span></div>
-<div class="flex justify-between items-baseline py-3"><span class="font-body-md text-on-surface">Limonada Frozen <span class="text-xs text-outline">(vaso / 1L)</span></span><span class="font-label-sm text-primary shrink-0 ml-4">S/ 11.00 / S/ 20.00</span></div>
-<div class="flex justify-between items-baseline py-3"><span class="font-body-md text-on-surface">Chicha de Maíz Morado <span class="text-xs text-outline">(vaso / 1L)</span></span><span class="font-label-sm text-primary shrink-0 ml-4">S/ 8.50 / S/ 16.00</span></div>
-<div class="flex justify-between items-baseline py-3"><span class="font-body-md text-on-surface">Maracuyá <span class="text-xs text-outline">(vaso / 1L)</span></span><span class="font-label-sm text-primary shrink-0 ml-4">S/ 8.50 / S/ 16.00</span></div>
-<div class="flex justify-between items-baseline py-3"><span class="font-body-md text-on-surface">Jugo de Mango <span class="text-xs text-outline">(vaso / 1L)</span></span><span class="font-label-sm text-primary shrink-0 ml-4">S/ 9.00 / S/ 17.00</span></div>
-<div class="flex justify-between items-baseline py-3"><span class="font-body-md text-on-surface">Jugo de Piña <span class="text-xs text-outline">(vaso / 1L)</span></span><span class="font-label-sm text-primary shrink-0 ml-4">S/ 8.50 / S/ 16.00</span></div>
-<div class="flex justify-between items-baseline py-3"><span class="font-body-md text-on-surface">Jugo Maracuyá + Tumbo <span class="text-xs text-outline">(vaso / 1L)</span></span><span class="font-label-sm text-primary shrink-0 ml-4">S/ 8.50 / S/ 16.00</span></div>
-<div class="flex justify-between items-baseline py-3"><span class="font-body-md text-on-surface">Jugo Mango + Piña <span class="text-xs text-outline">(vaso / 1L)</span></span><span class="font-label-sm text-primary shrink-0 ml-4">S/ 8.50 / S/ 16.00</span></div>
-<div class="flex justify-between items-baseline py-3"><span class="font-body-md text-on-surface">Jugo de Tumbo <span class="text-xs text-outline">(vaso / 1L)</span></span><span class="font-label-sm text-primary shrink-0 ml-4">S/ 8.50 / S/ 16.00</span></div>
-<div class="flex justify-between items-baseline py-3"><span class="font-body-md text-on-surface">Jugo de Papaya Arequipeña <span class="text-xs text-outline">(vaso / 1L)</span></span><span class="font-label-sm text-primary shrink-0 ml-4">S/ 9.00 / S/ 17.00</span></div>
-<div class="flex justify-between items-baseline py-3"><span class="font-body-md text-on-surface">Jugo de Fresa <span class="text-xs text-outline">(vaso / 1L)</span></span><span class="font-label-sm text-primary shrink-0 ml-4">S/ 9.00 / S/ 17.00</span></div>
-<div class="flex justify-between items-baseline py-3"><span class="font-body-md text-on-surface">Chicha de Guiñapo <span class="text-xs text-outline">(vaso / 1L)</span></span><span class="font-label-sm text-primary shrink-0 ml-4">S/ 7.50 / S/ 13.90</span></div>
-<div class="flex justify-between items-baseline py-3"><span class="font-body-md text-on-surface">Adicional de Leche</span><span class="font-label-sm text-primary shrink-0 ml-4">S/ 2.00</span></div>
-</div>
-</div>
-</details>
+      <!-- BUÑUELOS Y PICARONES -->
+      <details>
+        <summary><span class="cat-title">Buñuelos y Picarones</span><span class="material-symbols-outlined acc-chev">expand_more</span></summary>
+        <div class="acc-body">
+          <div class="menu-row"><span class="item-name">Buñuelos</span><span class="item-price">S/ 9.50</span></div>
+          <div class="menu-row"><span class="item-name">Picarones</span><span class="item-price">S/ 9.50</span></div>
+          <div class="menu-row"><span class="item-name">Mixto</span><span class="item-price">S/ 9.50</span></div>
+          <div class="menu-row"><span class="item-name">Picarones Bebé</span><span class="item-price">S/ 11.50</span></div>
+          <div class="menu-row"><span class="item-name">Buñuelos Bebé</span><span class="item-price">S/ 11.50</span></div>
+          <div class="menu-row"><span class="item-name">Mixto Bebé</span><span class="item-price">S/ 11.50</span></div>
+          <div class="menu-row"><span class="item-name">Buñuelos de Maíz Morado <span class="item-note">(vie–dom)</span></span><span class="item-price">S/ 9.50</span></div>
+          <div class="menu-row"><span class="item-name">Buñuelos de Quinua <span class="item-note">(muy pronto · vie–dom)</span></span><span class="item-soon">—</span></div>
+          <div class="menu-row"><span class="item-name">Buñuelos de Lacayote <span class="item-note">(muy pronto · vie–dom)</span></span><span class="item-soon">—</span></div>
+          <div class="menu-row"><span class="item-name">Dulce Carmelo <span class="item-note">(vie–dom)</span></span><span class="item-price">S/ 12.00</span></div>
+        </div>
+      </details>
 
-<!-- CERVEZA Y GASEOSAS -->
-<details class="bg-surface border border-outline/20 rounded shadow-sm">
-<summary class="flex items-center justify-between px-6 py-4 select-none hover:bg-surface-container-low transition-colors rounded">
-<span class="font-headline-md text-on-surface text-lg">Cerveza y Gaseosas</span>
-<span class="material-symbols-outlined accordion-chevron text-primary">expand_more</span>
-</summary>
-<div class="accordion-body px-6 pb-5 pt-1 border-t border-outline-variant/30">
-<p class="font-label-sm text-secondary uppercase tracking-widest mt-2 mb-1">Cervezas</p>
-<div class="flex flex-col divide-y divide-outline-variant/20">
-<div class="flex justify-between items-baseline py-3"><span class="font-body-md text-on-surface">Pilsen</span><span class="font-label-sm text-primary shrink-0 ml-4">S/ 10.00</span></div>
-<div class="flex justify-between items-baseline py-3"><span class="font-body-md text-on-surface">Cusqueña</span><span class="font-label-sm text-primary shrink-0 ml-4">S/ 10.00</span></div>
-<div class="flex justify-between items-baseline py-3"><span class="font-body-md text-on-surface">Corona</span><span class="font-label-sm text-primary shrink-0 ml-4">S/ 12.00</span></div>
-<div class="flex justify-between items-baseline py-3"><span class="font-body-md text-on-surface">Arequipeña 620ml</span><span class="font-label-sm text-outline shrink-0 ml-4">muy pronto</span></div>
-<div class="flex justify-between items-baseline py-3"><span class="font-body-md text-on-surface">Cerveza Artesanal Lobonegro</span><span class="font-label-sm text-outline shrink-0 ml-4">muy pronto</span></div>
-<div class="flex justify-between items-baseline py-3"><span class="font-body-md text-on-surface">Stella Artois</span><span class="font-label-sm text-primary shrink-0 ml-4">S/ 15.00</span></div>
-<div class="flex justify-between items-baseline py-3"><span class="font-body-md text-on-surface">Heineken</span><span class="font-label-sm text-primary shrink-0 ml-4">S/ 15.00</span></div>
-</div>
-<p class="font-label-sm text-secondary uppercase tracking-widest mt-4 mb-1">Gaseosas</p>
-<div class="flex flex-col divide-y divide-outline-variant/20">
-<div class="flex justify-between items-baseline py-3"><span class="font-body-md text-on-surface">Inca Kola</span><span class="font-label-sm text-primary shrink-0 ml-4">S/ 5.50</span></div>
-<div class="flex justify-between items-baseline py-3"><span class="font-body-md text-on-surface">Fanta</span><span class="font-label-sm text-primary shrink-0 ml-4">S/ 5.50</span></div>
-<div class="flex justify-between items-baseline py-3"><span class="font-body-md text-on-surface">Escocesa</span><span class="font-label-sm text-primary shrink-0 ml-4">S/ 6.50</span></div>
-<div class="flex justify-between items-baseline py-3"><span class="font-body-md text-on-surface">Coca Cola</span><span class="font-label-sm text-primary shrink-0 ml-4">S/ 5.50</span></div>
-<div class="flex justify-between items-baseline py-3"><span class="font-body-md text-on-surface">Energina</span><span class="font-label-sm text-primary shrink-0 ml-4">S/ 5.00</span></div>
-<div class="flex justify-between items-baseline py-3"><span class="font-body-md text-on-surface">Agua San Luis</span><span class="font-label-sm text-primary shrink-0 ml-4">S/ 3.50</span></div>
-<div class="flex justify-between items-baseline py-3"><span class="font-body-md text-on-surface">Socosani con Gas</span><span class="font-label-sm text-primary shrink-0 ml-4">S/ 3.50</span></div>
-</div>
-</div>
-</details>
+      <!-- COMBOS -->
+      <details>
+        <summary><span class="cat-title">Combos</span><span class="material-symbols-outlined acc-chev">expand_more</span></summary>
+        <div class="acc-body">
+          <div class="menu-row"><span class="item-name">Anticuchero 1</span><span class="item-price">S/ 37.00</span></div>
+          <div class="menu-row"><span class="item-name">Anticuchero 2</span><span class="item-price">S/ 46.00</span></div>
+          <div class="menu-row"><span class="item-name">Anticuchero 3</span><span class="item-price">S/ 45.00</span></div>
+          <div class="menu-row"><span class="item-name">Anticuchero 4</span><span class="item-price">S/ 49.90</span></div>
+          <div class="menu-row"><span class="item-name">Chacarero 1</span><span class="item-price">S/ 54.90</span></div>
+          <div class="menu-row"><span class="item-name">Chacarero 2</span><span class="item-soon">precio por confirmar</span></div>
+          <div class="menu-row"><span class="item-name">Chacarero 3</span><span class="item-soon">precio por confirmar</span></div>
+          <div class="menu-row"><span class="item-name">Especial Los Carmelos <span class="item-note">(3 personas)</span></span><span class="item-price">S/ 115.00</span></div>
+          <div class="menu-row"><span class="item-name">Los Carmelos Fest <span class="item-note">(5 personas)</span></span><span class="item-price">S/ 145.00</span></div>
+        </div>
+      </details>
 
-<!-- COCKTAILS -->
-<details class="bg-surface border border-outline/20 rounded shadow-sm">
-<summary class="flex items-center justify-between px-6 py-4 select-none hover:bg-surface-container-low transition-colors rounded">
-<span class="font-headline-md text-on-surface text-lg">Cócteles</span>
-<span class="material-symbols-outlined accordion-chevron text-primary">expand_more</span>
-</summary>
-<div class="accordion-body px-6 pb-5 pt-1 border-t border-outline-variant/30">
-<div class="flex flex-col divide-y divide-outline-variant/20">
-<div class="flex justify-between items-baseline py-3"><span class="font-body-md text-on-surface">Piña Colada</span><span class="font-label-sm text-primary shrink-0 ml-4">S/ 20.00</span></div>
-<div class="flex justify-between items-baseline py-3"><span class="font-body-md text-on-surface">Vodka Tonic</span><span class="font-label-sm text-primary shrink-0 ml-4">S/ 15.00</span></div>
-<div class="flex justify-between items-baseline py-3"><span class="font-body-md text-on-surface">Screwdriver</span><span class="font-label-sm text-primary shrink-0 ml-4">S/ 22.00</span></div>
-<div class="flex justify-between items-baseline py-3"><span class="font-body-md text-on-surface">Pisco Sour</span><span class="font-label-sm text-primary shrink-0 ml-4">S/ 25.00</span></div>
-<div class="flex justify-between items-baseline py-3"><span class="font-body-md text-on-surface">Gin Tonic</span><span class="font-label-sm text-primary shrink-0 ml-4">S/ 20.00</span></div>
-<div class="flex justify-between items-baseline py-3"><span class="font-body-md text-on-surface">Chilcano</span><span class="font-label-sm text-primary shrink-0 ml-4">S/ 20.00</span></div>
-<div class="flex justify-between items-baseline py-3"><span class="font-body-md text-on-surface">Mojito</span><span class="font-label-sm text-primary shrink-0 ml-4">S/ 22.00</span></div>
-<div class="flex justify-between items-baseline py-3"><span class="font-body-md text-on-surface">Orgasmo</span><span class="font-label-sm text-primary shrink-0 ml-4">S/ 22.00</span></div>
-<div class="flex justify-between items-baseline py-3"><span class="font-body-md text-on-surface">Machu Picchu</span><span class="font-label-sm text-primary shrink-0 ml-4">S/ 20.00</span></div>
-<div class="flex justify-between items-baseline py-3"><span class="font-body-md text-on-surface">Pantera Rosa</span><span class="font-label-sm text-primary shrink-0 ml-4">S/ 18.00</span></div>
-<div class="flex justify-between items-baseline py-3"><span class="font-body-md text-on-surface">Perú Libre</span><span class="font-label-sm text-primary shrink-0 ml-4">S/ 18.00</span></div>
-<div class="flex justify-between items-baseline py-3"><span class="font-body-md text-on-surface">Don Carmelo Tropic</span><span class="font-label-sm text-primary shrink-0 ml-4">S/ 30.00</span></div>
-<div class="flex justify-between items-baseline py-3"><span class="font-body-md text-on-surface">Jarra de Sangría</span><span class="font-label-sm text-primary shrink-0 ml-4">S/ 28.00</span></div>
-<div class="flex justify-between items-baseline py-3"><span class="font-body-md text-on-surface">Cucaracha</span><span class="font-label-sm text-primary shrink-0 ml-4">S/ 20.00</span></div>
-<div class="flex justify-between items-baseline py-3"><span class="font-body-md text-on-surface">Algarrobina</span><span class="font-label-sm text-primary shrink-0 ml-4">S/ 18.00</span></div>
-<div class="flex justify-between items-baseline py-3"><span class="font-body-md text-on-surface">Canario</span><span class="font-label-sm text-primary shrink-0 ml-4">S/ 15.00</span></div>
-<div class="flex justify-between items-baseline py-3"><span class="font-body-md text-on-surface">Toro Bravo</span><span class="font-label-sm text-primary shrink-0 ml-4">S/ 22.00</span></div>
-<div class="flex justify-between items-baseline py-3"><span class="font-body-md text-on-surface">Tequila Sunrise</span><span class="font-label-sm text-primary shrink-0 ml-4">S/ 15.00</span></div>
-<div class="flex justify-between items-baseline py-3"><span class="font-body-md text-on-surface">Capitán</span><span class="font-label-sm text-primary shrink-0 ml-4">S/ 19.00</span></div>
-<div class="flex justify-between items-baseline py-3"><span class="font-body-md text-on-surface">Cuba Libre</span><span class="font-label-sm text-primary shrink-0 ml-4">S/ 17.00</span></div>
-<div class="flex justify-between items-baseline py-3"><span class="font-body-md text-on-surface">Daiquiri</span><span class="font-label-sm text-primary shrink-0 ml-4">S/ 20.00</span></div>
-<div class="flex justify-between items-baseline py-3"><span class="font-body-md text-on-surface">Margarita</span><span class="font-label-sm text-primary shrink-0 ml-4">S/ 19.00</span></div>
-<div class="flex justify-between items-baseline py-3"><span class="font-body-md text-on-surface">Margarita Corona</span><span class="font-label-sm text-primary shrink-0 ml-4">S/ 28.00</span></div>
-</div>
-</div>
-</details>
+      <!-- BEBIDAS CALIENTES -->
+      <details>
+        <summary><span class="cat-title">Bebidas Calientes</span><span class="material-symbols-outlined acc-chev">expand_more</span></summary>
+        <div class="acc-body">
+          <div class="menu-row"><span class="item-name">Ponche de Cacao <span class="item-note">(taza / 1L)</span></span><span class="item-price">S/ 5.50 / S/ 17.90</span></div>
+          <div class="menu-row"><span class="item-name">Diana de Almendra <span class="item-note">(taza / 1L)</span></span><span class="item-price">S/ 8.00 / S/ 26.90</span></div>
+          <div class="menu-row"><span class="item-name">Emoliente <span class="item-note">(taza / 1L)</span></span><span class="item-price">S/ 5.50 / S/ 18.90</span></div>
+          <div class="menu-row"><span class="item-name">Café Exprés</span><span class="item-price">S/ 6.00</span></div>
+          <div class="menu-row"><span class="item-name">Café Americano</span><span class="item-price">S/ 8.00</span></div>
+          <div class="menu-row"><span class="item-name">Cappuccino</span><span class="item-price">S/ 10.00</span></div>
+          <div class="menu-row"><span class="item-name">Té con Papaya Arequipeña</span><span class="item-price">S/ 5.00</span></div>
+          <div class="menu-row"><span class="item-name">Shot de Anisado</span><span class="item-price">S/ 2.50</span></div>
+          <div class="menu-row"><span class="item-name">Shot de Anisado Frutos Rojos</span><span class="item-price">S/ 4.00</span></div>
+          <div class="menu-row"><span class="item-name">Infusiones</span><span class="item-price">S/ 5.00</span></div>
+        </div>
+      </details>
 
-</div><!-- end accordion wrapper -->
-</div>
+      <!-- BEBIDAS FRÍAS -->
+      <details>
+        <summary><span class="cat-title">Bebidas Frías</span><span class="material-symbols-outlined acc-chev">expand_more</span></summary>
+        <div class="acc-body">
+          <div class="menu-row"><span class="item-name">Limonada <span class="item-note">(vaso / 1L)</span></span><span class="item-price">S/ 9.00 / S/ 18.00</span></div>
+          <div class="menu-row"><span class="item-name">Limonada Frozen <span class="item-note">(vaso / 1L)</span></span><span class="item-price">S/ 11.00 / S/ 20.00</span></div>
+          <div class="menu-row"><span class="item-name">Chicha de Maíz Morado <span class="item-note">(vaso / 1L)</span></span><span class="item-price">S/ 8.50 / S/ 16.00</span></div>
+          <div class="menu-row"><span class="item-name">Maracuyá <span class="item-note">(vaso / 1L)</span></span><span class="item-price">S/ 8.50 / S/ 16.00</span></div>
+          <div class="menu-row"><span class="item-name">Jugo de Mango <span class="item-note">(vaso / 1L)</span></span><span class="item-price">S/ 9.00 / S/ 17.00</span></div>
+          <div class="menu-row"><span class="item-name">Jugo de Piña <span class="item-note">(vaso / 1L)</span></span><span class="item-price">S/ 8.50 / S/ 16.00</span></div>
+          <div class="menu-row"><span class="item-name">Jugo Maracuyá + Tumbo <span class="item-note">(vaso / 1L)</span></span><span class="item-price">S/ 8.50 / S/ 16.00</span></div>
+          <div class="menu-row"><span class="item-name">Jugo Mango + Piña <span class="item-note">(vaso / 1L)</span></span><span class="item-price">S/ 8.50 / S/ 16.00</span></div>
+          <div class="menu-row"><span class="item-name">Jugo de Tumbo <span class="item-note">(vaso / 1L)</span></span><span class="item-price">S/ 8.50 / S/ 16.00</span></div>
+          <div class="menu-row"><span class="item-name">Jugo de Papaya Arequipeña <span class="item-note">(vaso / 1L)</span></span><span class="item-price">S/ 9.00 / S/ 17.00</span></div>
+          <div class="menu-row"><span class="item-name">Jugo de Fresa <span class="item-note">(vaso / 1L)</span></span><span class="item-price">S/ 9.00 / S/ 17.00</span></div>
+          <div class="menu-row"><span class="item-name">Chicha de Guiñapo <span class="item-note">(vaso / 1L)</span></span><span class="item-price">S/ 7.50 / S/ 13.90</span></div>
+          <div class="menu-row"><span class="item-name">Adicional de Leche</span><span class="item-price">S/ 2.00</span></div>
+        </div>
+      </details>
+
+      <!-- CERVEZA Y GASEOSAS -->
+      <details>
+        <summary><span class="cat-title">Cerveza y Gaseosas</span><span class="material-symbols-outlined acc-chev">expand_more</span></summary>
+        <div class="acc-body">
+          <p class="sub-label">Cervezas</p>
+          <div class="menu-row"><span class="item-name">Pilsen</span><span class="item-price">S/ 10.00</span></div>
+          <div class="menu-row"><span class="item-name">Cusqueña</span><span class="item-price">S/ 10.00</span></div>
+          <div class="menu-row"><span class="item-name">Corona</span><span class="item-price">S/ 12.00</span></div>
+          <div class="menu-row"><span class="item-name">Arequipeña 620ml</span><span class="item-soon">muy pronto</span></div>
+          <div class="menu-row"><span class="item-name">Cerveza Artesanal Lobonegro</span><span class="item-soon">muy pronto</span></div>
+          <div class="menu-row"><span class="item-name">Stella Artois</span><span class="item-price">S/ 15.00</span></div>
+          <div class="menu-row"><span class="item-name">Heineken</span><span class="item-price">S/ 15.00</span></div>
+          <p class="sub-label">Gaseosas</p>
+          <div class="menu-row"><span class="item-name">Inca Kola</span><span class="item-price">S/ 5.50</span></div>
+          <div class="menu-row"><span class="item-name">Fanta</span><span class="item-price">S/ 5.50</span></div>
+          <div class="menu-row"><span class="item-name">Escocesa</span><span class="item-price">S/ 6.50</span></div>
+          <div class="menu-row"><span class="item-name">Coca Cola</span><span class="item-price">S/ 5.50</span></div>
+          <div class="menu-row"><span class="item-name">Energina</span><span class="item-price">S/ 5.00</span></div>
+          <div class="menu-row"><span class="item-name">Agua San Luis</span><span class="item-price">S/ 3.50</span></div>
+          <div class="menu-row"><span class="item-name">Socosani con Gas</span><span class="item-price">S/ 3.50</span></div>
+        </div>
+      </details>
+
+      <!-- CÓCTELES -->
+      <details>
+        <summary><span class="cat-title">Cócteles</span><span class="material-symbols-outlined acc-chev">expand_more</span></summary>
+        <div class="acc-body">
+          <div class="menu-row"><span class="item-name">Piña Colada</span><span class="item-price">S/ 20.00</span></div>
+          <div class="menu-row"><span class="item-name">Vodka Tonic</span><span class="item-price">S/ 15.00</span></div>
+          <div class="menu-row"><span class="item-name">Screwdriver</span><span class="item-price">S/ 22.00</span></div>
+          <div class="menu-row"><span class="item-name">Pisco Sour</span><span class="item-price">S/ 25.00</span></div>
+          <div class="menu-row"><span class="item-name">Gin Tonic</span><span class="item-price">S/ 20.00</span></div>
+          <div class="menu-row"><span class="item-name">Chilcano</span><span class="item-price">S/ 20.00</span></div>
+          <div class="menu-row"><span class="item-name">Mojito</span><span class="item-price">S/ 22.00</span></div>
+          <div class="menu-row"><span class="item-name">Orgasmo</span><span class="item-price">S/ 22.00</span></div>
+          <div class="menu-row"><span class="item-name">Machu Picchu</span><span class="item-price">S/ 20.00</span></div>
+          <div class="menu-row"><span class="item-name">Pantera Rosa</span><span class="item-price">S/ 18.00</span></div>
+          <div class="menu-row"><span class="item-name">Perú Libre</span><span class="item-price">S/ 18.00</span></div>
+          <div class="menu-row"><span class="item-name">Don Carmelo Tropic</span><span class="item-price">S/ 30.00</span></div>
+          <div class="menu-row"><span class="item-name">Jarra de Sangría</span><span class="item-price">S/ 28.00</span></div>
+          <div class="menu-row"><span class="item-name">Cucaracha</span><span class="item-price">S/ 20.00</span></div>
+          <div class="menu-row"><span class="item-name">Algarrobina</span><span class="item-price">S/ 18.00</span></div>
+          <div class="menu-row"><span class="item-name">Canario</span><span class="item-price">S/ 15.00</span></div>
+          <div class="menu-row"><span class="item-name">Toro Bravo</span><span class="item-price">S/ 22.00</span></div>
+          <div class="menu-row"><span class="item-name">Tequila Sunrise</span><span class="item-price">S/ 15.00</span></div>
+          <div class="menu-row"><span class="item-name">Capitán</span><span class="item-price">S/ 19.00</span></div>
+          <div class="menu-row"><span class="item-name">Cuba Libre</span><span class="item-price">S/ 17.00</span></div>
+          <div class="menu-row"><span class="item-name">Daiquiri</span><span class="item-price">S/ 20.00</span></div>
+          <div class="menu-row"><span class="item-name">Margarita</span><span class="item-price">S/ 19.00</span></div>
+          <div class="menu-row"><span class="item-name">Margarita Corona</span><span class="item-price">S/ 28.00</span></div>
+        </div>
+      </details>
+
+    </div>
+  </div>
 </section>
-<!-- El Patio del Sillar -->
+
+<!-- Gold divider -->
+<div class="gold-divider"></div>
+
+<!-- ═══ PATIO ═══ -->
 <section class="py-section-gap relative overflow-hidden" id="patio">
-<div class="absolute inset-0 bg-surface-variant z-0">
-<img alt="white volcanic sillar stone arches santa catalina monastery arequipa" class="w-full h-full object-cover opacity-40 mix-blend-multiply" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCOWd-8m4MHGt45Q3z_bmJycjb82w5I20p7Wq_Vba-SbiOSLBiYvPRnEZd512QMgIPc6NmIHV3oue_hRWN3qqUmgXIHFfFoCukkoJ_ekw_vm8Xc_4PI2gRwqQYQ7SO1sa1fLM7waso74Gjwot7eztrrHIjQIZROr_Zy8wCkw2NjmpmL-RAS3O036OnqxEzGsclZN4QvBU5aQa40eEPdiKQTL4797kQqSwIBZJ5Wp3K-e2jV98tXCc20Mqzop1YhueSKmPjmz68pjpEb"/>
-</div>
-<div class="relative z-10 max-w-container-max mx-auto px-margin-edge">
-<div class="bg-surface/90 backdrop-blur-md p-12 md:p-16 max-w-2xl border border-outline-variant rounded-sm shadow-xl">
-<span class="font-label-sm text-secondary uppercase tracking-widest mb-4 block">Experiencia</span>
-<h2 class="font-headline-xl text-on-surface mb-6">El Patio del Sillar</h2>
-<p class="font-body-lg text-on-surface-variant mb-8">
-                    Cene bajo las estrellas en nuestro patio central, rodeado de imponentes arquerías de piedra tallada. Un ambiente que evoca la serenidad de los claustros coloniales, diseñado para prolongar las sobremesas y disfrutar de nuestra selecta carta de piscos.
-                </p>
-<a class="inline-flex items-center gap-2 bg-primary-container text-on-primary-container font-label-sm px-6 py-3 rounded uppercase hover:bg-primary transition-colors" href="#reservas">
-                    Solicitar Mesa en Patio
-                    <span class="material-symbols-outlined text-sm">event_seat</span>
-</a>
-</div>
-</div>
+  <div class="absolute inset-0 z-0">
+    <img alt="Arcos de sillar arequipeño" class="w-full h-full object-cover"
+         src="https://lh3.googleusercontent.com/aida-public/AB6AXuCOWd-8m4MHGt45Q3z_bmJycjb82w5I20p7Wq_Vba-SbiOSLBiYvPRnEZd512QMgIPc6NmIHV3oue_hRWN3qqUmgXIHFfFoCukkoJ_ekw_vm8Xc_4PI2gRwqQYQ7SO1sa1fLM7waso74Gjwot7eztrrHIjQIZROr_Zy8wCkw2NjmpmL-RAS3O036OnqxEzGsclZN4QvBU5aQa40eEPdiKQTL4797kQqSwIBZJ5Wp3K-e2jV98tXCc20Mqzop1YhueSKmPjmz68pjpEb"/>
+    <div class="absolute inset-0" style="background:linear-gradient(135deg, rgba(46,14,4,0.7) 0%, rgba(0,0,0,0.3) 100%);"></div>
+  </div>
+  <div class="relative z-10 max-w-[1280px] mx-auto px-margin-edge">
+    <div class="patio-card max-w-2xl p-12 md:p-16 shadow-2xl" style="border:1px solid rgba(212,175,55,0.3);">
+      <span class="block font-label-sm text-[#C04000] uppercase tracking-widest mb-4">✦ Experiencia ✦</span>
+      <h2 class="font-headline-xl text-[#2e0e04] mb-6" style="font-family:'Noto Serif',serif;">El Patio del Sillar</h2>
+      <p class="text-[#4a2010] leading-relaxed mb-8" style="font-size:1.05rem;">
+        Cene bajo las estrellas en nuestro patio central, rodeado de imponentes arquerías de piedra tallada. Un ambiente que evoca la serenidad de los claustros coloniales, diseñado para prolongar las sobremesas y disfrutar de nuestra selecta carta de piscos.
+      </p>
+      <a class="inline-flex items-center gap-2 bg-[#C04000] text-white font-label-sm px-6 py-3 rounded uppercase hover:bg-[#973100] transition-colors" href="#ubicacion">
+        Solicitar Mesa en Patio
+        <span class="material-symbols-outlined text-sm">event_seat</span>
+      </a>
+    </div>
+  </div>
 </section>
-<!-- Ubicación, Horario y Contacto -->
-<section class="py-section-gap px-margin-edge bg-surface border-t border-outline-variant/30" id="ubicacion">
-<div class="max-w-container-max mx-auto">
-<div class="text-center mb-14 flex flex-col items-center gap-4">
-<span class="font-label-sm text-secondary uppercase tracking-widest">Encuéntranos</span>
-<h2 class="font-headline-lg text-on-surface">Visítanos en Arequipa</h2>
-<div class="w-16 h-[1px] bg-secondary-container"></div>
-</div>
-<div class="grid grid-cols-1 md:grid-cols-3 gap-10">
 
-<!-- Dirección -->
-<div class="flex flex-col gap-4 items-center md:items-start text-center md:text-left">
-<div class="w-12 h-12 rounded-full bg-primary-container/20 flex items-center justify-center">
-<span class="material-symbols-outlined text-primary">location_on</span>
-</div>
-<h3 class="font-headline-md text-on-surface">Dirección</h3>
-<p class="font-body-md text-on-surface-variant">
-Av. Los Carmelos s/n<br/>
-Cayma, Arequipa — Perú
-</p>
-<a href="https://maps.google.com/?q=Los+Carmelos+Arequipa" target="_blank" class="inline-flex items-center gap-1 font-label-sm text-primary uppercase hover:text-primary-container transition-colors">
-<span class="material-symbols-outlined text-sm">open_in_new</span>
-Ver en Google Maps
-</a>
-</div>
+<!-- Gold divider -->
+<div class="gold-divider"></div>
 
-<!-- Horario -->
-<div class="flex flex-col gap-4 items-center md:items-start text-center md:text-left">
-<div class="w-12 h-12 rounded-full bg-primary-container/20 flex items-center justify-center">
-<span class="material-symbols-outlined text-primary">schedule</span>
-</div>
-<h3 class="font-headline-md text-on-surface">Horario</h3>
-<div class="font-body-md text-on-surface-variant flex flex-col gap-1 w-full max-w-xs">
-<div class="flex justify-between gap-4"><span>Lunes – Viernes</span><span class="text-on-surface font-medium">8:00 – 19:00</span></div>
-<div class="flex justify-between gap-4"><span>Sábado</span><span class="text-on-surface font-medium">7:00 – 20:00</span></div>
-<div class="flex justify-between gap-4"><span>Domingo</span><span class="text-on-surface font-medium">7:00 – 18:00</span></div>
-<p class="text-xs text-outline mt-2">Horario sujeto a cambios en feriados.</p>
-</div>
-</div>
+<!-- ═══ UBICACIÓN ═══ -->
+<section class="py-section-gap px-margin-edge" id="ubicacion">
+  <div class="max-w-[1280px] mx-auto">
 
-<!-- WhatsApp y Redes -->
-<div class="flex flex-col gap-4 items-center md:items-start text-center md:text-left">
-<div class="w-12 h-12 rounded-full bg-primary-container/20 flex items-center justify-center">
-<span class="material-symbols-outlined text-primary">phone_in_talk</span>
-</div>
-<h3 class="font-headline-md text-on-surface">Contacto</h3>
-<p class="font-body-md text-on-surface-variant">
-Reservas y consultas<br/>a través de WhatsApp.
-</p>
-<a href="https://wa.me/51999999999?text=Hola%20Los%20Carmelos%2C%20quisiera%20hacer%20una%20reserva" target="_blank"
-   class="inline-flex items-center gap-3 bg-[#25D366] text-white font-label-sm px-6 py-3 rounded uppercase hover:bg-[#1fba58] transition-colors shadow-md">
-<svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 shrink-0" viewBox="0 0 24 24" fill="currentColor">
-<path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
-</svg>
-Escribir por WhatsApp
-</a>
-</div>
+    <div class="text-center mb-14 flex flex-col items-center gap-4">
+      <span class="font-label-sm text-[#D4AF37] uppercase tracking-widest">✦ Encuéntranos ✦</span>
+      <h2 class="font-headline-lg text-white" style="font-family:'Noto Serif',serif;">Visítanos en Arequipa</h2>
+      <div class="w-16 h-px" style="background:#D4AF37; opacity:.6;"></div>
+    </div>
 
-</div><!-- end grid -->
-</div>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+
+      <div class="info-card p-8 flex flex-col gap-4">
+        <div class="icon-ring">
+          <span class="material-symbols-outlined">location_on</span>
+        </div>
+        <h3 class="text-white font-headline-md" style="font-family:'Noto Serif',serif;">Dirección</h3>
+        <p class="text-[#f5e9d9]/80 leading-relaxed">Av. Los Carmelos s/n<br/>Cayma, Arequipa — Perú</p>
+        <a href="https://maps.google.com/?q=Los+Carmelos+Arequipa" target="_blank"
+           class="inline-flex items-center gap-1 text-[#D4AF37] font-label-sm uppercase hover:text-white transition-colors text-xs">
+          <span class="material-symbols-outlined text-sm">open_in_new</span>Ver en Google Maps
+        </a>
+      </div>
+
+      <div class="info-card p-8 flex flex-col gap-4">
+        <div class="icon-ring">
+          <span class="material-symbols-outlined">schedule</span>
+        </div>
+        <h3 class="text-white font-headline-md" style="font-family:'Noto Serif',serif;">Horario</h3>
+        <div class="flex flex-col gap-2" style="font-size:.9rem;">
+          <div class="flex justify-between gap-4"><span class="text-[#f5e9d9]/70">Lunes – Viernes</span><span class="text-[#D4AF37] font-semibold">8:00 – 19:00</span></div>
+          <div class="flex justify-between gap-4"><span class="text-[#f5e9d9]/70">Sábado</span><span class="text-[#D4AF37] font-semibold">7:00 – 20:00</span></div>
+          <div class="flex justify-between gap-4"><span class="text-[#f5e9d9]/70">Domingo</span><span class="text-[#D4AF37] font-semibold">7:00 – 18:00</span></div>
+          <p class="text-white/35 text-xs mt-1">Horario sujeto a cambios en feriados.</p>
+        </div>
+      </div>
+
+      <div class="info-card p-8 flex flex-col gap-4">
+        <div class="icon-ring">
+          <span class="material-symbols-outlined">phone_in_talk</span>
+        </div>
+        <h3 class="text-white font-headline-md" style="font-family:'Noto Serif',serif;">Contacto</h3>
+        <p class="text-[#f5e9d9]/80">Reservas y consultas<br/>a través de WhatsApp.</p>
+        <a href="https://wa.me/51999999999?text=Hola%20Los%20Carmelos%2C%20quisiera%20hacer%20una%20reserva" target="_blank"
+           class="inline-flex items-center gap-3 font-label-sm px-5 py-3 rounded uppercase transition-colors shadow text-xs text-white"
+           style="background:#25D366;">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 shrink-0" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+          </svg>
+          WhatsApp
+        </a>
+      </div>
+
+    </div>
+  </div>
 </section>
-<!-- Footer -->
-<footer class="w-full border-t border-stone-200 pt-20 pb-10 border-[#D4AF37]/20 bg-stone-50" id="reservas">
-<div class="max-w-7xl mx-auto px-8 grid grid-cols-1 md:grid-cols-2 gap-12 text-center md:text-left">
-<div class="flex flex-col gap-4">
-<img src="logo.png" alt="Los Carmelos" class="h-28 w-auto object-contain mx-auto md:mx-0" />
-<p class="font-serif text-stone-700 text-sm max-w-sm mx-auto md:mx-0">
-                    © 2024 Los Carmelos. Picantería Arequipeña — Auténtico sabor de Arequipa.
-                </p>
-</div>
-<div class="grid grid-cols-2 gap-4 text-sm font-serif text-stone-700">
-<div class="flex flex-col gap-3">
-<a class="text-stone-500 hover:text-stone-900 underline decoration-[#D4AF37]/50 transition-colors duration-500" href="#menu">El Menú</a>
-<a class="text-stone-500 hover:text-stone-900 underline decoration-[#D4AF37]/50 transition-colors duration-500" href="#herencia">Nuestra Historia</a>
-<a class="text-stone-500 hover:text-stone-900 underline decoration-[#D4AF37]/50 transition-colors duration-500" href="#patio">El Patio</a>
-</div>
-<div class="flex flex-col gap-3">
-<a class="text-stone-500 hover:text-stone-900 underline decoration-[#D4AF37]/50 transition-colors duration-500" href="#">Prensa</a>
-<a class="text-stone-500 hover:text-stone-900 underline decoration-[#D4AF37]/50 transition-colors duration-500" href="#">Contacto</a>
-</div>
-</div>
-</div>
+
+<!-- ═══ FOOTER ═══ -->
+<footer class="pt-16 pb-8 px-8 md:px-16" id="reservas">
+  <!-- Top gold line -->
+  <div class="gold-divider mb-12"></div>
+  <div class="max-w-[1280px] mx-auto grid grid-cols-1 md:grid-cols-3 gap-10 mb-12">
+
+    <div class="flex flex-col gap-4">
+      <img src="logo.png" alt="Los Carmelos" class="h-28 w-auto object-contain"/>
+      <p class="text-[#f5e9d9]/50 text-sm leading-relaxed" style="font-family:'Noto Serif',serif; font-style:italic;">
+        Tradición y Costumbres.<br/>Auténtico sabor de Arequipa.
+      </p>
+    </div>
+
+    <div class="flex flex-col gap-3">
+      <p class="text-[#D4AF37] font-label-sm uppercase tracking-widest text-xs mb-1">Navegación</p>
+      <a href="#menu" class="text-sm" style="font-family:'Noto Serif',serif;">El Menú</a>
+      <a href="#herencia" class="text-sm" style="font-family:'Noto Serif',serif;">Nuestra Historia</a>
+      <a href="#patio" class="text-sm" style="font-family:'Noto Serif',serif;">El Patio</a>
+      <a href="#ubicacion" class="text-sm" style="font-family:'Noto Serif',serif;">Ubicación</a>
+    </div>
+
+    <div class="flex flex-col gap-3">
+      <p class="text-[#D4AF37] font-label-sm uppercase tracking-widest text-xs mb-1">Contacto</p>
+      <a href="https://wa.me/51999999999" target="_blank" class="text-sm flex items-center gap-2" style="font-family:'Noto Serif',serif;">
+        <span class="material-symbols-outlined text-sm text-[#D4AF37]">chat</span>WhatsApp
+      </a>
+      <a href="#" class="text-sm flex items-center gap-2" style="font-family:'Noto Serif',serif;">
+        <span class="material-symbols-outlined text-sm text-[#D4AF37]">alternate_email</span>Contacto
+      </a>
+    </div>
+
+  </div>
+  <div class="max-w-[1280px] mx-auto border-t border-white/10 pt-6 flex flex-col md:flex-row justify-between items-center gap-2">
+    <p class="text-[#f5e9d9]/35 text-xs" style="font-family:'Noto Serif',serif;">© 2024 Los Carmelos — Picantería Arequipeña</p>
+    <p class="text-[#f5e9d9]/25 text-xs">Arequipa, Perú ✦</p>
+  </div>
 </footer>
-</body></html>
+
+</body>
+</html>
