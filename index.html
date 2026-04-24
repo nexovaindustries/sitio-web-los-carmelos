@@ -123,51 +123,17 @@
             from { opacity: 0; transform: translateY(-6px); }
             to   { opacity: 1; transform: translateY(0); }
         }
-        /* Smart nav */
-        #main-nav {
-            background: transparent;
-            border-bottom-color: transparent;
-            transition: background 0.4s ease, box-shadow 0.4s ease, padding 0.3s ease;
-        }
-        #main-nav.nav-scrolled {
-            background: rgba(255,255,255,0.93) !important;
-            backdrop-filter: blur(20px);
-            -webkit-backdrop-filter: blur(20px);
-            box-shadow: 0 1px 24px rgba(0,0,0,0.10);
-            border-bottom-color: rgba(212,175,55,0.25) !important;
-        }
-        #main-nav .nav-inner {
-            transition: height 0.3s ease;
-            height: 80px;
-        }
-        #main-nav.nav-scrolled .nav-inner {
-            height: 64px;
-        }
-        #main-nav .nav-logo-img {
-            transition: height 0.3s ease, filter 0.4s ease;
-            height: 52px;
-            filter: drop-shadow(0 2px 4px rgba(0,0,0,0.3));
-        }
-        #main-nav.nav-scrolled .nav-logo-img {
-            height: 42px;
-            filter: none;
-        }
-        #main-nav .nav-link {
-            color: rgba(255,255,255,0.90);
-            transition: color 0.3s;
-        }
-        #main-nav.nav-scrolled .nav-link {
-            color: #594139;
-        }
-        #main-nav .nav-link:hover { color: #C04000 !important; }
-        #main-nav .nav-link.active { color: #C04000 !important; border-bottom-color: #C04000 !important; }
-        #main-nav.nav-scrolled .nav-link.active { color: #C04000; }
+        /* Nav */
+        #main-nav .nav-logo-img { height: 80px; }
+        #main-nav .nav-link { color: #594139; transition: color 0.2s; }
+        #main-nav .nav-link:hover { color: #C04000; }
+        #main-nav .nav-link.active { color: #C04000; border-bottom-color: #C04000; }
     </style>
 </head>
 <body class="bg-surface font-body-md text-on-surface antialiased texture-sillar">
 <!-- TopNavBar -->
-<nav class="fixed top-0 w-full z-50 border-b" id="main-nav">
-<div class="nav-inner flex justify-between items-center px-8 md:px-16 w-full max-w-container-max mx-auto">
+<nav class="fixed top-0 w-full z-50 bg-white border-b border-[#D4AF37]/30 shadow-sm" id="main-nav">
+<div class="flex justify-between items-center px-8 md:px-16 py-2 w-full max-w-container-max mx-auto">
 <a href="#" class="flex items-center">
 <img src="logo.png" alt="Los Carmelos" class="nav-logo-img" />
 </a>
@@ -183,18 +149,6 @@ Reservar
 </a>
 </div>
 </nav>
-<script>
-(function() {
-  var nav = document.getElementById('main-nav');
-  window.addEventListener('scroll', function() {
-    if (window.scrollY > 60) {
-      nav.classList.add('nav-scrolled');
-    } else {
-      nav.classList.remove('nav-scrolled');
-    }
-  }, { passive: true });
-})();
-</script>
 <!-- Hero Section -->
 <header class="relative w-full h-screen flex items-center justify-center">
 <div class="absolute inset-0 z-0">
@@ -202,9 +156,9 @@ Reservar
 <div class="absolute inset-0 bg-black/40"></div>
 </div>
 <div class="relative z-10 text-center px-4 max-w-4xl mx-auto flex flex-col items-center gap-6 pt-20">
-<img src="logo.png" alt="Los Carmelos — Tradición y Costumbres" class="w-72 md:w-96 drop-shadow-2xl" style="filter: drop-shadow(0 4px 32px rgba(0,0,0,0.5));" />
+<h1 class="font-headline-xl text-on-primary text-5xl md:text-7xl drop-shadow-lg">Los Carmelos</h1>
 <p class="font-body-lg text-on-primary/90 text-xl md:text-2xl max-w-2xl font-light tracking-wide">El Auténtico Legado de la Picantería Arequipeña</p>
-<div class="flex flex-col sm:flex-row gap-4 mt-4">
+<div class="flex flex-col sm:flex-row gap-4 mt-8">
 <a class="px-8 py-4 border border-secondary-container text-secondary-container font-label-sm uppercase hover:bg-secondary-container/10 transition-colors rounded backdrop-blur-sm" href="#menu">
                     Ver Menú
                 </a>
@@ -594,10 +548,8 @@ Escribir por WhatsApp
 <!-- Footer -->
 <footer class="w-full border-t border-stone-200 pt-20 pb-10 border-[#D4AF37]/20 bg-stone-50" id="reservas">
 <div class="max-w-7xl mx-auto px-8 grid grid-cols-1 md:grid-cols-2 gap-12 text-center md:text-left">
-<div class="flex flex-col gap-6">
-<div class="text-xl font-serif text-stone-800">
-                    Los Carmelos
-                </div>
+<div class="flex flex-col gap-4">
+<img src="logo.png" alt="Los Carmelos" class="h-28 w-auto object-contain mx-auto md:mx-0" />
 <p class="font-serif text-stone-700 text-sm max-w-sm mx-auto md:mx-0">
                     © 2024 Los Carmelos. Picantería Arequipeña — Auténtico sabor de Arequipa.
                 </p>
