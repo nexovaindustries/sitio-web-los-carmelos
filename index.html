@@ -72,7 +72,7 @@ tailwind.config = {
   #main-nav .nav-link.active { color: #C04000; border-bottom: 2px solid #C04000; padding-bottom: 2px; }
 
   /* scroll offset for fixed nav */
-  #inicio, #herencia, #menu, #patio, #ubicacion { scroll-margin-top: 136px; }
+  #inicio, #herencia, #menu, #ambiente, #ubicacion { scroll-margin-top: 136px; }
 
   /* ── Gold divider ── */
   .gold-divider {
@@ -180,7 +180,7 @@ tailwind.config = {
       <a class="nav-link active" href="#inicio">Inicio</a>
       <a class="nav-link" href="#herencia">Nuestra Historia</a>
       <a class="nav-link" href="#menu">Menú</a>
-      <a class="nav-link" href="#patio">El Patio</a>
+      <a class="nav-link" href="#ambiente">Nuestro Espacio</a>
       <a class="nav-link" href="#ubicacion">Ubicación</a>
     </div>
   </div>
@@ -484,25 +484,76 @@ tailwind.config = {
 <!-- Gold divider -->
 <div class="gold-divider"></div>
 
-<!-- ═══ PATIO ═══ -->
-<section class="py-section-gap relative overflow-hidden" id="patio">
-  <div class="absolute inset-0 z-0">
-    <img alt="Arcos de sillar arequipeño" class="w-full h-full object-cover"
-         src="https://lh3.googleusercontent.com/aida-public/AB6AXuCOWd-8m4MHGt45Q3z_bmJycjb82w5I20p7Wq_Vba-SbiOSLBiYvPRnEZd512QMgIPc6NmIHV3oue_hRWN3qqUmgXIHFfFoCukkoJ_ekw_vm8Xc_4PI2gRwqQYQ7SO1sa1fLM7waso74Gjwot7eztrrHIjQIZROr_Zy8wCkw2NjmpmL-RAS3O036OnqxEzGsclZN4QvBU5aQa40eEPdiKQTL4797kQqSwIBZJ5Wp3K-e2jV98tXCc20Mqzop1YhueSKmPjmz68pjpEb"/>
-    <div class="absolute inset-0" style="background:linear-gradient(135deg, rgba(46,14,4,0.7) 0%, rgba(0,0,0,0.3) 100%);"></div>
-  </div>
-  <div class="relative z-10 max-w-[1280px] mx-auto px-margin-edge">
-    <div class="patio-card max-w-2xl p-12 md:p-16 shadow-2xl" style="border:1px solid rgba(212,175,55,0.3);">
-      <span class="block font-label-sm text-[#C04000] uppercase tracking-widest mb-4">✦ Experiencia ✦</span>
-      <h2 class="font-headline-xl text-[#2e0e04] mb-6" style="font-family:'Noto Serif',serif;">El Patio del Sillar</h2>
-      <p class="text-[#4a2010] leading-relaxed mb-8" style="font-size:1.05rem;">
-        Cene bajo las estrellas en nuestro patio central, rodeado de imponentes arquerías de piedra tallada. Un ambiente que evoca la serenidad de los claustros coloniales, diseñado para prolongar las sobremesas y disfrutar de nuestra selecta carta de piscos.
+<!-- ═══ PUERTAS ADENTRO ═══ -->
+<section class="py-section-gap px-margin-edge" id="ambiente" style="background-color:#faf0e6;">
+  <div class="max-w-[1280px] mx-auto">
+
+    <!-- Encabezado -->
+    <div class="text-center mb-12 flex flex-col items-center gap-4">
+      <span class="font-label-sm text-[#C04000] uppercase tracking-widest">✦ Nuestro Espacio ✦</span>
+      <h2 class="font-headline-lg text-[#2e0e04]" style="font-family:'Noto Serif',serif;">Puertas Adentro</h2>
+      <p class="text-[#4a2010] max-w-xl leading-relaxed" style="font-size:1rem; font-family:'Noto Serif',serif; font-style:italic;">
+        Cada rincón de Los Carmelos guarda el alma de Arequipa — sus arcos de sillar, sus ollas de barro y el calor de una tradición que nunca se apaga.
       </p>
-      <a class="inline-flex items-center gap-2 bg-[#C04000] text-white font-label-sm px-6 py-3 rounded uppercase hover:bg-[#973100] transition-colors" href="#ubicacion">
-        Solicitar Mesa en Patio
-        <span class="material-symbols-outlined text-sm">event_seat</span>
+      <div class="w-16 h-px" style="background:linear-gradient(to right,#C04000,#D4AF37,#C04000);"></div>
+    </div>
+
+    <!-- Mosaico de fotos -->
+    <div style="display:grid; grid-template-columns:2fr 1fr 1fr; grid-template-rows:320px 320px; gap:8px;">
+
+      <!-- Foto 1: entrada principal — ocupa 2 filas a la izquierda -->
+      <div style="grid-column:1; grid-row:1/3; overflow:hidden; border-radius:2px;">
+        <img src="img/foto_1.jpg" alt="Entrada de Los Carmelos"
+             style="width:100%; height:100%; object-fit:cover; transition:transform .5s ease;"
+             onmouseover="this.style.transform='scale(1.04)'" onmouseout="this.style.transform='scale(1)'"/>
+      </div>
+
+      <!-- Foto 2: arco interior — columna 2, fila 1 -->
+      <div style="grid-column:2; grid-row:1; overflow:hidden; border-radius:2px;">
+        <img src="img/foto_2.jpg" alt="Arcos del local"
+             style="width:100%; height:100%; object-fit:cover; transition:transform .5s ease;"
+             onmouseover="this.style.transform='scale(1.04)'" onmouseout="this.style.transform='scale(1)'"/>
+      </div>
+
+      <!-- Foto 5: tinaja de barro — columna 3, fila 1 -->
+      <div style="grid-column:3; grid-row:1; overflow:hidden; border-radius:2px;">
+        <img src="img/foto_5.jpg" alt="Tinaja de barro tradicional"
+             style="width:100%; height:100%; object-fit:cover; transition:transform .5s ease;"
+             onmouseover="this.style.transform='scale(1.04)'" onmouseout="this.style.transform='scale(1)'"/>
+      </div>
+
+      <!-- Foto 3: escudo de armas — columna 2, fila 2 -->
+      <div style="grid-column:2; grid-row:2; overflow:hidden; border-radius:2px;">
+        <img src="img/foto_3.jpg" alt="Escudo de Arequipa"
+             style="width:100%; height:100%; object-fit:cover; transition:transform .5s ease;"
+             onmouseover="this.style.transform='scale(1.04)'" onmouseout="this.style.transform='scale(1)'"/>
+      </div>
+
+      <!-- Foto 4: sombreros — columna 3, fila 2 -->
+      <div style="grid-column:3; grid-row:2; overflow:hidden; border-radius:2px;">
+        <img src="img/foto_4.jpg" alt="Sombreros de paja arequipeños"
+             style="width:100%; height:100%; object-fit:cover; transition:transform .5s ease;"
+             onmouseover="this.style.transform='scale(1.04)'" onmouseout="this.style.transform='scale(1)'"/>
+      </div>
+
+    </div>
+
+    <!-- Foto 6: balde de queso helado — full width abajo -->
+    <div style="margin-top:8px; height:260px; overflow:hidden; border-radius:2px;">
+      <img src="img/foto_6.jpg" alt="Queso helado Los Carmelos"
+           style="width:100%; height:100%; object-fit:cover; object-position:center 40%; transition:transform .5s ease;"
+           onmouseover="this.style.transform='scale(1.02)'" onmouseout="this.style.transform='scale(1)'"/>
+    </div>
+
+    <!-- CTA -->
+    <div class="text-center mt-10">
+      <a href="#ubicacion"
+         class="inline-flex items-center gap-2 bg-[#C04000] text-white font-label-sm px-8 py-3 rounded uppercase hover:bg-[#973100] transition-colors tracking-widest shadow-md">
+        <span class="material-symbols-outlined text-base">location_on</span>
+        Visítanos
       </a>
     </div>
+
   </div>
 </section>
 
@@ -606,7 +657,7 @@ tailwind.config = {
 
 <script>
 (function () {
-  var sections = ['inicio', 'herencia', 'menu', 'patio', 'ubicacion'];
+  var sections = ['inicio', 'herencia', 'menu', 'ambiente', 'ubicacion'];
   var links = {};
   sections.forEach(function (id) {
     links[id] = document.querySelector('a.nav-link[href="#' + id + '"]');
