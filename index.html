@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+
+<html class="light" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>La Ciudad Blanca</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100..900;1,100..900&amp;family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "tertiary-container": "#c5372c",
+                        "primary-fixed": "#ffdbcf",
+                        "primary-container": "#c04000",
+                        "tertiary-fixed": "#ffdad5",
+                        "surface-container-lowest": "#ffffff",
+                        "inverse-on-surface": "#f1f1f1",
+                        "on-secondary-container": "#745c00",
+                        "on-primary-container": "#ffe9e3",
+                        "surface-bright": "#f9f9f9",
+                        "secondary-container": "#fed65b",
+                        "inverse-surface": "#2f3131",
+                        "outline-variant": "#e1bfb4",
+                        "on-tertiary-fixed-variant": "#900d0b",
+                        "secondary": "#735c00",
+                        "on-tertiary-container": "#ffe9e5",
+                        "on-primary-fixed": "#380d00",
+                        "on-surface": "#1a1c1c",
+                        "error": "#ba1a1a",
+                        "on-tertiary": "#ffffff",
+                        "on-secondary-fixed-variant": "#574500",
+                        "outline": "#8d7167",
+                        "tertiary-fixed-dim": "#ffb4a9",
+                        "surface-tint": "#a93700",
+                        "surface-container": "#eeeeee",
+                        "surface-container-highest": "#e2e2e2",
+                        "surface-container-high": "#e8e8e8",
+                        "on-secondary": "#ffffff",
+                        "on-primary": "#ffffff",
+                        "background": "#f9f9f9",
+                        "surface-dim": "#dadada",
+                        "surface-container-low": "#f3f3f3",
+                        "secondary-fixed": "#ffe088",
+                        "primary-fixed-dim": "#ffb59b",
+                        "on-secondary-fixed": "#241a00",
+                        "secondary-fixed-dim": "#e9c349",
+                        "on-primary-fixed-variant": "#812800",
+                        "on-error": "#ffffff",
+                        "tertiary": "#a21d17",
+                        "error-container": "#ffdad6",
+                        "on-tertiary-fixed": "#410001",
+                        "on-surface-variant": "#594139",
+                        "inverse-primary": "#ffb59b",
+                        "surface-variant": "#e2e2e2",
+                        "on-error-container": "#93000a",
+                        "on-background": "#1a1c1c",
+                        "primary": "#973100",
+                        "surface": "#f9f9f9"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "section-gap": "80px",
+                        "container-max": "1280px",
+                        "unit": "8px",
+                        "margin-edge": "40px",
+                        "gutter": "24px"
+                    },
+                    "fontFamily": {
+                        "body-md": ["Plus Jakarta Sans"],
+                        "headline-lg": ["Noto Serif"],
+                        "label-sm": ["Plus Jakarta Sans"],
+                        "headline-xl": ["Noto Serif"],
+                        "headline-md": ["Noto Serif"],
+                        "body-lg": ["Plus Jakarta Sans"]
+                    },
+                    "fontSize": {
+                        "body-md": ["16px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                        "headline-lg": ["36px", { "lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+                        "label-sm": ["12px", { "lineHeight": "1", "letterSpacing": "0.1em", "fontWeight": "600" }],
+                        "headline-xl": ["48px", { "lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "headline-md": ["24px", { "lineHeight": "1.3", "fontWeight": "600" }],
+                        "body-lg": ["18px", { "lineHeight": "1.6", "fontWeight": "400" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .texture-sillar {
+            background-color: #f9f9f9;
+            background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100' height='100' filter='url(%23noise)' opacity='0.03'/%3E%3C/svg%3E");
+        }
+        .arch-mask {
+            clip-path: polygon(0% 20%, 10% 5%, 50% 0%, 90% 5%, 100% 20%, 100% 100%, 0% 100%);
+        }
+    </style>
+</head>
+<body class="bg-surface font-body-md text-on-surface antialiased texture-sillar">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 border-b border-[#D4AF37]/30 bg-white/80 dark:bg-stone-900/80 backdrop-blur-xl border-b-[1px] border-stone-200/50 dark:border-stone-800/50 ease-in-out transition-all duration-300">
+<div class="flex justify-between items-center px-8 md:px-16 h-20 w-full max-w-container-max mx-auto">
+<div class="text-2xl font-serif font-bold text-[#C04000] dark:text-orange-600">
+                La Ciudad Blanca
+            </div>
+<div class="hidden md:flex items-center gap-8 font-serif tracking-widest uppercase text-sm">
+<a class="text-[#C04000] dark:text-orange-500 border-b border-[#C04000] pb-1 hover:text-[#C04000] dark:hover:text-orange-400 transition-all duration-300" href="#">Menu</a>
+<a class="text-stone-600 dark:text-stone-400 hover:text-[#C04000] dark:hover:text-orange-400 transition-all duration-300" href="#">The Story</a>
+<a class="text-stone-600 dark:text-stone-400 hover:text-[#C04000] dark:hover:text-orange-400 transition-all duration-300" href="#">Patio</a>
+<a class="text-stone-600 dark:text-stone-400 hover:text-[#C04000] dark:hover:text-orange-400 transition-all duration-300" href="#">Reservations</a>
+</div>
+<button class="bg-primary-container text-on-primary-container font-label-sm px-6 py-3 rounded uppercase hover:opacity-90 transition-opacity">
+                Book Now
+            </button>
+</div>
+</nav>
+<!-- Hero Section -->
+<header class="relative w-full h-screen flex items-center justify-center">
+<div class="absolute inset-0 z-0">
+<img alt="volcanic stone arch framing the Misti volcano, golden hour soft lighting, dramatic Arequipa landscape, highly detailed masonry" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCtXedkicR2zovzHBifoccall4JUHtRzweFkdILbC1UAB5aMVWsIScbqU8fOad3L04j-CiPim-iLXMApD0N09PQCzdKhGULweTOqrx2xPWxfHHLH58oN-xdldFs6wN-drXDXLIxAvlSJwgLuXRoPLLLFNlH1-HVDnkcnIBBA4zIpJ07qM_5YtF5lb3n7OTzezMXhvcMWz06VaeKp5vgUxi23r0SXhUdNFS6mH2Rn8gAdlH_GMWIzulRmkMnC9mmcdPvNRVErgdpccjc"/>
+<div class="absolute inset-0 bg-black/40"></div>
+</div>
+<div class="relative z-10 text-center px-4 max-w-4xl mx-auto flex flex-col items-center gap-6 pt-20">
+<h1 class="font-headline-xl text-on-primary text-5xl md:text-7xl drop-shadow-lg">La Ciudad Blanca</h1>
+<p class="font-body-lg text-on-primary/90 text-xl md:text-2xl max-w-2xl font-light tracking-wide">El Auténtico Legado de la Picantería Arequipeña</p>
+<div class="flex flex-col sm:flex-row gap-4 mt-8">
+<a class="px-8 py-4 border border-secondary-container text-secondary-container font-label-sm uppercase hover:bg-secondary-container/10 transition-colors rounded backdrop-blur-sm" href="#menu">
+                    Ver Menú
+                </a>
+<a class="px-8 py-4 bg-primary-container text-on-primary-container font-label-sm uppercase hover:bg-primary transition-colors rounded shadow-lg" href="#reservas">
+                    Reservar Mesa
+                </a>
+</div>
+</div>
+</header>
+<!-- Nuestra Herencia -->
+<section class="py-section-gap px-margin-edge max-w-container-max mx-auto">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+<div class="flex flex-col gap-6">
+<span class="font-label-sm text-secondary uppercase tracking-widest">Nuestra Herencia</span>
+<h2 class="font-headline-lg text-on-surface">Forjado en Sillar, Cocinado con Alma</h2>
+<p class="font-body-md text-on-surface-variant">
+                    Nuestra historia está tallada en la misma piedra volcánica que da forma a Arequipa. Generaciones de saberes culinarios se entrelazan bajo nuestros arcos, donde el batán aún muele los secretos de la picantería tradicional. Cada plato es un tributo a la tierra mestiza, uniendo el fuego del rocoto con la nobleza de nuestros ingredientes ancestrales.
+                </p>
+<div class="mt-4">
+<a class="inline-flex items-center gap-2 font-label-sm text-primary uppercase hover:text-primary-container transition-colors" href="#">
+                        Descubrir la Historia
+                        <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</a>
+</div>
+</div>
+<div class="relative h-[500px]">
+<img alt="rustic colonial interior of a traditional peruvian picanteria with stone walls, wooden tables, warm ambient lighting" class="w-full h-full object-cover rounded-sm shadow-md" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCNE5ddlz4p2VWyMLSwseFkSIkta7XdyuwEiad-TIfSMe_tJuks6ZcuGxTYx56VDtIqepXf-a0fiuyK7J917YLx9fVoGy0e6o9irsLIR3_li1Vw1nPAzL6G3lIlKnPynImoChpbAWhUbptIHPBF7eFzdS7YNpfgjrK1ug73hvU2nArcosERoB0eD9HXjqvdc_OsunGqt3sUYOaXfnVC2iZsLniXe0imSZEDv09itLowF9kVqO3Rt_8mpz_LDDo8ZY9zFZ1Ag8GfZ805"/>
+<div class="absolute -bottom-6 -left-6 w-32 h-32 bg-surface-container border border-outline-variant rounded flex items-center justify-center p-4 text-center">
+<span class="font-headline-md text-primary">Desde 1945</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Los Sabores de Antaño -->
+<section class="py-section-gap px-margin-edge bg-surface-container-low border-y border-outline-variant/30" id="menu">
+<div class="max-w-container-max mx-auto">
+<div class="text-center mb-16 flex flex-col items-center gap-4">
+<span class="font-label-sm text-secondary uppercase tracking-widest">Especialidades</span>
+<h2 class="font-headline-lg text-primary">Los Sabores de Antaño</h2>
+<div class="w-16 h-[1px] bg-secondary-container"></div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<div class="bg-surface border border-outline/20 rounded shadow-sm hover:shadow-md transition-shadow group">
+<div class="h-64 overflow-hidden rounded-t">
+<img alt="rocoto relleno" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCfV2t4_5vjBYodfyVB6eHQEQ2GfMMbgOfSYm4Wkyy924tZtNMcPEmRcNNUqc7N2sH0zniE-r2sG6bapKfwVRBb4VAUttdydCKMGZAbbjwQfpqlJ5nhzMnkvMhIqQffoXOJsdH_P7F9UdOw-GmohM2fDUFY1P-N7NXpoKw8OGNI5Tpk1AufKwt4oM3vVe_QS9R2njh_ZRCF8xhowcuzZEjXud1FA0rD0lDJqmuYufybQyo76x3AQ2jskkMJHat3_Fa_kW3RlviEmGId"/>
+</div>
+<div class="p-6 flex flex-col gap-4">
+<div class="flex justify-between items-start">
+<h3 class="font-headline-md text-on-surface">Rocoto Relleno</h3>
+<span class="font-label-sm text-primary">S/ 45</span>
+</div>
+<p class="font-body-md text-on-surface-variant text-sm border-b border-outline-variant/30 pb-4">
+                            El emblema arequipeño. Rocoto horneado relleno de picadillo de carne, maní y pasas, coronado con queso fundido y acompañado de pastel de papa.
+                        </p>
+</div>
+</div>
+<div class="bg-surface border border-outline/20 rounded shadow-sm hover:shadow-md transition-shadow group">
+<div class="h-64 overflow-hidden rounded-t">
+<img alt="chupe de camarones" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBxwNi0OLulKTIxm-WMEXtoDS_JUFo1mxymozVeN51Ucg_DRUTqcKgxXeWxecG8soXIEtpIsIwueItHAH0etVuT9D5bnQVZfwrH0Ea7qWE2t3fTgCtYGbs_ZpD0gRlN3bpCoXtVRrbDWizEJ35gLtd4Nn10z9dBq_prx1CPYFBcDJkmM_XZbmEFzmryIwy-Lc4o81IsPLFuGE66b1OM5jWUuOpgYWyVlptf_CGbQ-t3jQ_s0lruP7_83in-wZ1P_2BoMuittnol6X3T"/>
+</div>
+<div class="p-6 flex flex-col gap-4">
+<div class="flex justify-between items-start">
+<h3 class="font-headline-md text-on-surface">Chupe de Camarones</h3>
+<span class="font-label-sm text-primary">S/ 65</span>
+</div>
+<p class="font-body-md text-on-surface-variant text-sm border-b border-outline-variant/30 pb-4">
+                            Sopa sustanciosa de camarones de río, habas, choclo, queso fresco y un toque de huacatay, terminada con un huevo escalfado perfecto.
+                        </p>
+</div>
+</div>
+<div class="bg-surface border border-outline/20 rounded shadow-sm hover:shadow-md transition-shadow group">
+<div class="h-64 overflow-hidden rounded-t">
+<img alt="adobo arequipeño" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBUYR2-pVJOXR-l4GULwu-zQgFqOEzqRSAD-PA50AscTxFGWPI0_ni3U-gc5t23UnCtGMEYixGFbPhVtI4V3lp3BZOTgEGUmRV0PhXF22V74b0rxzHKuk_TIGjL6asBnTi0ulTjhzZy1RMqNBy1yxoV9tP6tJ_avduovuP5BphqlOnsRP5n5BuG01vpEjY-usfbhh7Itt27nUwyTYbQPu5xKENETWVBDGe84nzmH2Se0z2mhmDn8OJ3d9hbQimWPTbybTEDYZhI8D_F"/>
+</div>
+<div class="p-6 flex flex-col gap-4">
+<div class="flex justify-between items-start">
+<h3 class="font-headline-md text-on-surface">Adobo Dominical</h3>
+<span class="font-label-sm text-primary">S/ 55</span>
+</div>
+<p class="font-body-md text-on-surface-variant text-sm border-b border-outline-variant/30 pb-4">
+                            Lomo de cerdo macerado en chicha de jora, vinagre y ají panca, cocinado a fuego lento en olla de barro. Servido con pan de tres cachetes.
+                        </p>
+</div>
+</div>
+</div>
+<div class="mt-12 text-center">
+<a class="inline-block px-8 py-3 border border-primary text-primary font-label-sm uppercase hover:bg-primary hover:text-on-primary transition-colors rounded" href="#">
+                    Ver Menú Completo
+                </a>
+</div>
+</div>
+</section>
+<!-- El Patio del Sillar -->
+<section class="py-section-gap relative overflow-hidden">
+<div class="absolute inset-0 bg-surface-variant z-0">
+<img alt="white volcanic sillar stone arches santa catalina monastery arequipa" class="w-full h-full object-cover opacity-40 mix-blend-multiply" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCOWd-8m4MHGt45Q3z_bmJycjb82w5I20p7Wq_Vba-SbiOSLBiYvPRnEZd512QMgIPc6NmIHV3oue_hRWN3qqUmgXIHFfFoCukkoJ_ekw_vm8Xc_4PI2gRwqQYQ7SO1sa1fLM7waso74Gjwot7eztrrHIjQIZROr_Zy8wCkw2NjmpmL-RAS3O036OnqxEzGsclZN4QvBU5aQa40eEPdiKQTL4797kQqSwIBZJ5Wp3K-e2jV98tXCc20Mqzop1YhueSKmPjmz68pjpEb"/>
+</div>
+<div class="relative z-10 max-w-container-max mx-auto px-margin-edge">
+<div class="bg-surface/90 backdrop-blur-md p-12 md:p-16 max-w-2xl border border-outline-variant rounded-sm shadow-xl">
+<span class="font-label-sm text-secondary uppercase tracking-widest mb-4 block">Experiencia</span>
+<h2 class="font-headline-xl text-on-surface mb-6">El Patio del Sillar</h2>
+<p class="font-body-lg text-on-surface-variant mb-8">
+                    Cene bajo las estrellas en nuestro patio central, rodeado de imponentes arquerías de piedra tallada. Un ambiente que evoca la serenidad de los claustros coloniales, diseñado para prolongar las sobremesas y disfrutar de nuestra selecta carta de piscos.
+                </p>
+<a class="inline-flex items-center gap-2 bg-primary-container text-on-primary-container font-label-sm px-6 py-3 rounded uppercase hover:bg-primary transition-colors" href="#reservas">
+                    Solicitar Mesa en Patio
+                    <span class="material-symbols-outlined text-sm">event_seat</span>
+</a>
+</div>
+</div>
+</section>
+<!-- Testimonios -->
+<section class="py-section-gap px-margin-edge max-w-container-max mx-auto">
+<div class="text-center mb-16 flex flex-col items-center gap-4">
+<span class="font-label-sm text-secondary uppercase tracking-widest">Reseñas</span>
+<h2 class="font-headline-lg text-on-surface">Lo que dicen nuestros comensales</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+<div class="bg-surface-container border border-outline-variant p-8 rounded flex flex-col gap-4 relative">
+<span class="material-symbols-outlined text-outline-variant text-4xl absolute top-4 right-4 opacity-50">format_quote</span>
+<div class="flex gap-1 text-secondary-container">
+<span class="material-symbols-outlined text-sm">star</span>
+<span class="material-symbols-outlined text-sm">star</span>
+<span class="material-symbols-outlined text-sm">star</span>
+<span class="material-symbols-outlined text-sm">star</span>
+<span class="material-symbols-outlined text-sm">star</span>
+</div>
+<p class="font-body-md text-on-surface-variant flex-grow italic">
+                    "El mejor rocoto relleno que he probado en mi vida. El ambiente de la casona te transporta a otra época. Un servicio impecable y sabores genuinos."
+                </p>
+<div class="mt-4 pt-4 border-t border-outline-variant/50">
+<span class="font-label-sm text-on-surface block uppercase">María F.</span>
+<span class="text-xs text-on-surface-variant">Lima, Perú</span>
+</div>
+</div>
+<div class="bg-surface-container border border-outline-variant p-8 rounded flex flex-col gap-4 relative">
+<span class="material-symbols-outlined text-outline-variant text-4xl absolute top-4 right-4 opacity-50">format_quote</span>
+<div class="flex gap-1 text-secondary-container">
+<span class="material-symbols-outlined text-sm">star</span>
+<span class="material-symbols-outlined text-sm">star</span>
+<span class="material-symbols-outlined text-sm">star</span>
+<span class="material-symbols-outlined text-sm">star</span>
+<span class="material-symbols-outlined text-sm">star</span>
+</div>
+<p class="font-body-md text-on-surface-variant flex-grow italic">
+                    "A mandatory stop in Arequipa. The Chupe de Camarones was incredibly rich and authentic. The sillar stone architecture makes dining here a magical experience."
+                </p>
+<div class="mt-4 pt-4 border-t border-outline-variant/50">
+<span class="font-label-sm text-on-surface block uppercase">James T.</span>
+<span class="text-xs text-on-surface-variant">London, UK</span>
+</div>
+</div>
+<div class="bg-surface-container border border-outline-variant p-8 rounded flex flex-col gap-4 relative md:col-span-2 lg:col-span-1">
+<span class="material-symbols-outlined text-outline-variant text-4xl absolute top-4 right-4 opacity-50">format_quote</span>
+<div class="flex gap-1 text-secondary-container">
+<span class="material-symbols-outlined text-sm">star</span>
+<span class="material-symbols-outlined text-sm">star</span>
+<span class="material-symbols-outlined text-sm">star</span>
+<span class="material-symbols-outlined text-sm">star</span>
+<span class="material-symbols-outlined text-sm">star</span>
+</div>
+<p class="font-body-md text-on-surface-variant flex-grow italic">
+                    "Atención de primera. Celebramos nuestro aniversario en el patio interior y fue simplemente perfecto. El adobo dominical es un poema a la gastronomía peruana."
+                </p>
+<div class="mt-4 pt-4 border-t border-outline-variant/50">
+<span class="font-label-sm text-on-surface block uppercase">Carlos M.</span>
+<span class="text-xs text-on-surface-variant">Arequipa, Perú</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="w-full border-t border-stone-200 dark:border-stone-800 pt-20 pb-10 border-[#D4AF37]/20 bg-stone-50 dark:bg-stone-950">
+<div class="max-w-7xl mx-auto px-8 grid grid-cols-1 md:grid-cols-2 gap-12 text-center md:text-left">
+<div class="flex flex-col gap-6">
+<div class="text-xl font-serif text-stone-800 dark:text-stone-100">
+                    La Ciudad Blanca
+                </div>
+<p class="font-serif text-stone-700 dark:text-stone-300 text-sm max-w-sm mx-auto md:mx-0">
+                    © 2024 La Ciudad Blanca. Inspired by the Sillar heritage of Arequipa.
+                </p>
+</div>
+<div class="grid grid-cols-2 gap-4 text-sm font-serif text-stone-700 dark:text-stone-300">
+<div class="flex flex-col gap-3">
+<a class="text-stone-500 dark:text-stone-500 hover:text-stone-900 dark:hover:text-stone-100 underline decoration-[#D4AF37]/50 transition-colors duration-500" href="#">The Menu</a>
+<a class="text-stone-500 dark:text-stone-500 hover:text-stone-900 dark:hover:text-stone-100 underline decoration-[#D4AF37]/50 transition-colors duration-500" href="#">Architectural Heritage</a>
+<a class="text-stone-500 dark:text-stone-500 hover:text-stone-900 dark:hover:text-stone-100 underline decoration-[#D4AF37]/50 transition-colors duration-500" href="#">Sustainability</a>
+</div>
+<div class="flex flex-col gap-3">
+<a class="text-stone-500 dark:text-stone-500 hover:text-stone-900 dark:hover:text-stone-100 underline decoration-[#D4AF37]/50 transition-colors duration-500" href="#">Press Inquiry</a>
+<a class="text-stone-500 dark:text-stone-500 hover:text-stone-900 dark:hover:text-stone-100 underline decoration-[#D4AF37]/50 transition-colors duration-500" href="#">Contact</a>
+</div>
+</div>
+</div>
+</footer>
+</body></html>
