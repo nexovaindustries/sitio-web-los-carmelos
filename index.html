@@ -593,5 +593,34 @@ tailwind.config = {
   </div>
 </footer>
 
+<script>
+(function () {
+  var sections = ['menu', 'herencia', 'patio', 'ubicacion'];
+  var links = {};
+  sections.forEach(function (id) {
+    links[id] = document.querySelector('a.nav-link[href="#' + id + '"]');
+  });
+
+  function setActive(id) {
+    sections.forEach(function (s) {
+      if (links[s]) links[s].classList.remove('active');
+    });
+    if (id && links[id]) links[id].classList.add('active');
+  }
+
+  var observer = new IntersectionObserver(function (entries) {
+    entries.forEach(function (entry) {
+      if (entry.isIntersecting) {
+        setActive(entry.target.id);
+      }
+    });
+  }, { rootMargin: '-40% 0px -55% 0px', threshold: 0 });
+
+  sections.forEach(function (id) {
+    var el = document.getElementById(id);
+    if (el) observer.observe(el);
+  });
+})();
+</script>
 </body>
 </html>
