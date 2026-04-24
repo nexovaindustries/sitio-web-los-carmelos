@@ -3,7 +3,7 @@
 <html class="light" lang="es"><head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>La Ciudad Blanca</title>
+<title>La Ciudad Blanca — Picantería Arequipeña</title>
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
 <link href="https://fonts.googleapis.com" rel="preconnect"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
@@ -100,6 +100,9 @@
         .material-symbols-outlined {
             font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
         }
+        .material-symbols-outlined.filled {
+            font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
         .texture-sillar {
             background-color: #f9f9f9;
             background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100' height='100' filter='url(%23noise)' opacity='0.03'/%3E%3C/svg%3E");
@@ -117,13 +120,13 @@
                 La Ciudad Blanca
             </div>
 <div class="hidden md:flex items-center gap-8 font-serif tracking-widest uppercase text-sm">
-<a class="text-[#C04000] dark:text-orange-500 border-b border-[#C04000] pb-1 hover:text-[#C04000] dark:hover:text-orange-400 transition-all duration-300" href="#">Menu</a>
-<a class="text-stone-600 dark:text-stone-400 hover:text-[#C04000] dark:hover:text-orange-400 transition-all duration-300" href="#">The Story</a>
-<a class="text-stone-600 dark:text-stone-400 hover:text-[#C04000] dark:hover:text-orange-400 transition-all duration-300" href="#">Patio</a>
-<a class="text-stone-600 dark:text-stone-400 hover:text-[#C04000] dark:hover:text-orange-400 transition-all duration-300" href="#">Reservations</a>
+<a class="text-[#C04000] dark:text-orange-500 border-b border-[#C04000] pb-1 hover:text-[#C04000] dark:hover:text-orange-400 transition-all duration-300" href="#menu">Menú</a>
+<a class="text-stone-600 dark:text-stone-400 hover:text-[#C04000] dark:hover:text-orange-400 transition-all duration-300" href="#herencia">Nuestra Historia</a>
+<a class="text-stone-600 dark:text-stone-400 hover:text-[#C04000] dark:hover:text-orange-400 transition-all duration-300" href="#patio">El Patio</a>
+<a class="text-stone-600 dark:text-stone-400 hover:text-[#C04000] dark:hover:text-orange-400 transition-all duration-300" href="#reservas">Reservas</a>
 </div>
 <button class="bg-primary-container text-on-primary-container font-label-sm px-6 py-3 rounded uppercase hover:opacity-90 transition-opacity">
-                Book Now
+                Reservar
             </button>
 </div>
 </nav>
@@ -147,7 +150,7 @@
 </div>
 </header>
 <!-- Nuestra Herencia -->
-<section class="py-section-gap px-margin-edge max-w-container-max mx-auto">
+<section class="py-section-gap px-margin-edge max-w-container-max mx-auto" id="herencia">
 <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
 <div class="flex flex-col gap-6">
 <span class="font-label-sm text-secondary uppercase tracking-widest">Nuestra Herencia</span>
@@ -230,7 +233,7 @@
 </div>
 </section>
 <!-- El Patio del Sillar -->
-<section class="py-section-gap relative overflow-hidden">
+<section class="py-section-gap relative overflow-hidden" id="patio">
 <div class="absolute inset-0 bg-surface-variant z-0">
 <img alt="white volcanic sillar stone arches santa catalina monastery arequipa" class="w-full h-full object-cover opacity-40 mix-blend-multiply" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCOWd-8m4MHGt45Q3z_bmJycjb82w5I20p7Wq_Vba-SbiOSLBiYvPRnEZd512QMgIPc6NmIHV3oue_hRWN3qqUmgXIHFfFoCukkoJ_ekw_vm8Xc_4PI2gRwqQYQ7SO1sa1fLM7waso74Gjwot7eztrrHIjQIZROr_Zy8wCkw2NjmpmL-RAS3O036OnqxEzGsclZN4QvBU5aQa40eEPdiKQTL4797kQqSwIBZJ5Wp3K-e2jV98tXCc20Mqzop1YhueSKmPjmz68pjpEb"/>
 </div>
@@ -248,86 +251,26 @@
 </div>
 </div>
 </section>
-<!-- Testimonios -->
-<section class="py-section-gap px-margin-edge max-w-container-max mx-auto">
-<div class="text-center mb-16 flex flex-col items-center gap-4">
-<span class="font-label-sm text-secondary uppercase tracking-widest">Reseñas</span>
-<h2 class="font-headline-lg text-on-surface">Lo que dicen nuestros comensales</h2>
-</div>
-<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-<div class="bg-surface-container border border-outline-variant p-8 rounded flex flex-col gap-4 relative">
-<span class="material-symbols-outlined text-outline-variant text-4xl absolute top-4 right-4 opacity-50">format_quote</span>
-<div class="flex gap-1 text-secondary-container">
-<span class="material-symbols-outlined text-sm">star</span>
-<span class="material-symbols-outlined text-sm">star</span>
-<span class="material-symbols-outlined text-sm">star</span>
-<span class="material-symbols-outlined text-sm">star</span>
-<span class="material-symbols-outlined text-sm">star</span>
-</div>
-<p class="font-body-md text-on-surface-variant flex-grow italic">
-                    "El mejor rocoto relleno que he probado en mi vida. El ambiente de la casona te transporta a otra época. Un servicio impecable y sabores genuinos."
-                </p>
-<div class="mt-4 pt-4 border-t border-outline-variant/50">
-<span class="font-label-sm text-on-surface block uppercase">María F.</span>
-<span class="text-xs text-on-surface-variant">Lima, Perú</span>
-</div>
-</div>
-<div class="bg-surface-container border border-outline-variant p-8 rounded flex flex-col gap-4 relative">
-<span class="material-symbols-outlined text-outline-variant text-4xl absolute top-4 right-4 opacity-50">format_quote</span>
-<div class="flex gap-1 text-secondary-container">
-<span class="material-symbols-outlined text-sm">star</span>
-<span class="material-symbols-outlined text-sm">star</span>
-<span class="material-symbols-outlined text-sm">star</span>
-<span class="material-symbols-outlined text-sm">star</span>
-<span class="material-symbols-outlined text-sm">star</span>
-</div>
-<p class="font-body-md text-on-surface-variant flex-grow italic">
-                    "A mandatory stop in Arequipa. The Chupe de Camarones was incredibly rich and authentic. The sillar stone architecture makes dining here a magical experience."
-                </p>
-<div class="mt-4 pt-4 border-t border-outline-variant/50">
-<span class="font-label-sm text-on-surface block uppercase">James T.</span>
-<span class="text-xs text-on-surface-variant">London, UK</span>
-</div>
-</div>
-<div class="bg-surface-container border border-outline-variant p-8 rounded flex flex-col gap-4 relative md:col-span-2 lg:col-span-1">
-<span class="material-symbols-outlined text-outline-variant text-4xl absolute top-4 right-4 opacity-50">format_quote</span>
-<div class="flex gap-1 text-secondary-container">
-<span class="material-symbols-outlined text-sm">star</span>
-<span class="material-symbols-outlined text-sm">star</span>
-<span class="material-symbols-outlined text-sm">star</span>
-<span class="material-symbols-outlined text-sm">star</span>
-<span class="material-symbols-outlined text-sm">star</span>
-</div>
-<p class="font-body-md text-on-surface-variant flex-grow italic">
-                    "Atención de primera. Celebramos nuestro aniversario en el patio interior y fue simplemente perfecto. El adobo dominical es un poema a la gastronomía peruana."
-                </p>
-<div class="mt-4 pt-4 border-t border-outline-variant/50">
-<span class="font-label-sm text-on-surface block uppercase">Carlos M.</span>
-<span class="text-xs text-on-surface-variant">Arequipa, Perú</span>
-</div>
-</div>
-</div>
-</section>
 <!-- Footer -->
-<footer class="w-full border-t border-stone-200 dark:border-stone-800 pt-20 pb-10 border-[#D4AF37]/20 bg-stone-50 dark:bg-stone-950">
+<footer class="w-full border-t border-stone-200 pt-20 pb-10 border-[#D4AF37]/20 bg-stone-50" id="reservas">
 <div class="max-w-7xl mx-auto px-8 grid grid-cols-1 md:grid-cols-2 gap-12 text-center md:text-left">
 <div class="flex flex-col gap-6">
-<div class="text-xl font-serif text-stone-800 dark:text-stone-100">
+<div class="text-xl font-serif text-stone-800">
                     La Ciudad Blanca
                 </div>
-<p class="font-serif text-stone-700 dark:text-stone-300 text-sm max-w-sm mx-auto md:mx-0">
-                    © 2024 La Ciudad Blanca. Inspired by the Sillar heritage of Arequipa.
+<p class="font-serif text-stone-700 text-sm max-w-sm mx-auto md:mx-0">
+                    © 2024 La Ciudad Blanca. Inspirada en el patrimonio del sillar de Arequipa.
                 </p>
 </div>
-<div class="grid grid-cols-2 gap-4 text-sm font-serif text-stone-700 dark:text-stone-300">
+<div class="grid grid-cols-2 gap-4 text-sm font-serif text-stone-700">
 <div class="flex flex-col gap-3">
-<a class="text-stone-500 dark:text-stone-500 hover:text-stone-900 dark:hover:text-stone-100 underline decoration-[#D4AF37]/50 transition-colors duration-500" href="#">The Menu</a>
-<a class="text-stone-500 dark:text-stone-500 hover:text-stone-900 dark:hover:text-stone-100 underline decoration-[#D4AF37]/50 transition-colors duration-500" href="#">Architectural Heritage</a>
-<a class="text-stone-500 dark:text-stone-500 hover:text-stone-900 dark:hover:text-stone-100 underline decoration-[#D4AF37]/50 transition-colors duration-500" href="#">Sustainability</a>
+<a class="text-stone-500 hover:text-stone-900 underline decoration-[#D4AF37]/50 transition-colors duration-500" href="#menu">El Menú</a>
+<a class="text-stone-500 hover:text-stone-900 underline decoration-[#D4AF37]/50 transition-colors duration-500" href="#herencia">Nuestra Historia</a>
+<a class="text-stone-500 hover:text-stone-900 underline decoration-[#D4AF37]/50 transition-colors duration-500" href="#patio">El Patio</a>
 </div>
 <div class="flex flex-col gap-3">
-<a class="text-stone-500 dark:text-stone-500 hover:text-stone-900 dark:hover:text-stone-100 underline decoration-[#D4AF37]/50 transition-colors duration-500" href="#">Press Inquiry</a>
-<a class="text-stone-500 dark:text-stone-500 hover:text-stone-900 dark:hover:text-stone-100 underline decoration-[#D4AF37]/50 transition-colors duration-500" href="#">Contact</a>
+<a class="text-stone-500 hover:text-stone-900 underline decoration-[#D4AF37]/50 transition-colors duration-500" href="#">Prensa</a>
+<a class="text-stone-500 hover:text-stone-900 underline decoration-[#D4AF37]/50 transition-colors duration-500" href="#">Contacto</a>
 </div>
 </div>
 </div>
