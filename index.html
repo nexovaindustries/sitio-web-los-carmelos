@@ -264,7 +264,11 @@ tailwind.config = {
       <div class="gold-divider-sm"></div>
     </div>
 
-    <div class="flex flex-col gap-2 max-w-3xl mx-auto">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
+
+      <!-- ── COLUMNA IZQUIERDA: COMIDAS ── -->
+      <div class="flex flex-col gap-2">
+        <p class="font-label-sm uppercase tracking-widest mb-2 text-center" style="color:#D4AF37; letter-spacing:.2em;">🍽 Comidas</p>
 
       <!-- ENTRADAS Y SOPAS -->
       <details>
@@ -375,6 +379,12 @@ tailwind.config = {
         </div>
       </details>
 
+      </div><!-- fin columna comidas -->
+
+      <!-- ── COLUMNA DERECHA: BEBIDAS ── -->
+      <div class="flex flex-col gap-2">
+        <p class="font-label-sm uppercase tracking-widest mb-2 text-center" style="color:#D4AF37; letter-spacing:.2em;">🍹 Bebidas</p>
+
       <!-- BEBIDAS CALIENTES -->
       <details>
         <summary><span class="cat-title">Bebidas Calientes</span><span class="material-symbols-outlined acc-chev">expand_more</span></summary>
@@ -465,7 +475,9 @@ tailwind.config = {
         </div>
       </details>
 
-    </div>
+      </div><!-- fin columna bebidas -->
+
+    </div><!-- fin grid dos columnas -->
   </div>
 </section>
 
