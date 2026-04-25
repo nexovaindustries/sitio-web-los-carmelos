@@ -267,6 +267,106 @@ tailwind.config = {
 
   /* ── Section title accent glow ── */
   .title-glow { text-shadow: 0 2px 24px rgba(192,64,0,0.22); }
+
+  /* ══════════════════════════════
+     RESPONSIVE MÓVIL
+  ══════════════════════════════ */
+
+  /* Hamburger button */
+  .hamburger-bar {
+    display: block; width: 24px; height: 2px;
+    background: #1a0a02;
+    transition: transform .22s ease, opacity .22s ease;
+    border-radius: 2px;
+  }
+  #menu-toggle[aria-expanded="true"] .hamburger-bar:nth-child(1) { transform: translateY(8px) rotate(45deg); }
+  #menu-toggle[aria-expanded="true"] .hamburger-bar:nth-child(2) { opacity: 0; transform: scaleX(0); }
+  #menu-toggle[aria-expanded="true"] .hamburger-bar:nth-child(3) { transform: translateY(-8px) rotate(-45deg); }
+
+  /* Mobile nav panel */
+  #mobile-nav {
+    background: rgba(253,248,242,0.97);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    border-top: 1px solid rgba(192,64,0,0.15);
+    border-bottom: 3px solid #C04000;
+    padding: 1rem 2rem 1.25rem;
+    display: flex; flex-direction: column; gap: .25rem;
+  }
+  #mobile-nav.hidden { display: none; }
+  #mobile-nav .mob-link {
+    font-family: 'Noto Serif', serif;
+    font-size: 1rem; letter-spacing: .08em;
+    text-transform: uppercase; color: #1a0a02;
+    padding: .65rem 0;
+    border-bottom: 1px solid rgba(192,64,0,0.1);
+    display: block; transition: color .2s;
+  }
+  #mobile-nav .mob-link:last-child { border-bottom: none; }
+  #mobile-nav .mob-link:hover, #mobile-nav .mob-link.active { color: #C04000; }
+
+  @media (max-width: 767px) {
+    /* Logo más pequeño en mobile */
+    #main-nav .nav-logo-img { height: 80px; }
+
+    /* Padding lateral reducido en mobile */
+    .px-margin-edge { padding-left: 1rem !important; padding-right: 1rem !important; }
+    .px-8 { padding-left: 1rem !important; padding-right: 1rem !important; }
+    footer { padding-left: 1rem !important; padding-right: 1rem !important; }
+
+    /* scroll-margin para el nav más pequeño */
+    #inicio, #herencia, #menu, #ambiente, #ubicacion { scroll-margin-top: 96px; }
+
+    /* Hero título */
+    .hero-title { font-size: 3rem !important; }
+    .hero-subtitle { font-size: 1rem !important; }
+
+    /* Menú: precios en línea propia si no caben */
+    #menu .menu-row { flex-wrap: wrap; gap: 0; }
+    #menu .item-name {
+      flex: 1 1 auto; min-width: 0;
+      font-size: .88rem; word-break: break-word;
+      padding-right: .4rem;
+    }
+    #menu .item-price, #menu .item-soon { flex: 0 0 auto; }
+    #menu details summary { padding: .8rem 1rem; }
+    #menu .acc-body { padding: .2rem .9rem 1rem; }
+
+    /* Galería responsiva — sobreescribe inline con !important */
+    .gallery-grid {
+      grid-template-columns: 1fr 1fr !important;
+      grid-template-rows: 210px 160px 160px !important;
+      gap: 5px !important;
+    }
+    .gallery-grid .gallery-cell:nth-child(1) {
+      grid-column: 1 / 3 !important;
+      grid-row: 1 !important;
+    }
+    .gallery-grid .gallery-cell:nth-child(2) {
+      grid-column: 1 !important; grid-row: 2 !important;
+    }
+    .gallery-grid .gallery-cell:nth-child(3) {
+      grid-column: 2 !important; grid-row: 2 !important;
+    }
+    .gallery-grid .gallery-cell:nth-child(4) {
+      grid-column: 1 !important; grid-row: 3 !important;
+    }
+    .gallery-grid .gallery-cell:nth-child(5) {
+      grid-column: 2 !important; grid-row: 3 !important;
+    }
+
+    /* Sillar frame — sombra reducida en mobile para no salir de pantalla */
+    .sillar-frame {
+      box-shadow: 0 0 0 1px #8a7040, 0 0 0 4px #e8d8b0, 0 0 0 5px #a89060, 0 6px 18px rgba(30,8,2,0.4);
+      margin-left: .25rem; margin-right: .25rem;
+    }
+    /* Badge "Desde 1945" más pequeño en mobile */
+    .sillar-frame .absolute { bottom: 6px !important; left: 6px !important; width: 4.5rem !important; height: 4.5rem !important; }
+    .sillar-frame .absolute span { font-size: .95rem !important; }
+
+    /* Mapa más bajo en mobile */
+    #ubicacion iframe { height: 260px !important; }
+  }
 </style>
 </head>
 
@@ -285,6 +385,20 @@ tailwind.config = {
       <a class="nav-link" href="#ambiente">Espacio</a>
       <a class="nav-link" href="#ubicacion">Ubicación</a>
     </div>
+    <!-- Hamburger (solo mobile) -->
+    <button id="menu-toggle" class="md:hidden flex flex-col justify-center gap-[7px] p-2 -mr-1" aria-label="Abrir menú" aria-expanded="false">
+      <span class="hamburger-bar"></span>
+      <span class="hamburger-bar"></span>
+      <span class="hamburger-bar"></span>
+    </button>
+  </div>
+  <!-- Panel mobile -->
+  <div id="mobile-nav" class="hidden">
+    <a class="mob-link active" href="#inicio">Inicio</a>
+    <a class="mob-link" href="#herencia">Nuestra Herencia</a>
+    <a class="mob-link" href="#menu">Menú</a>
+    <a class="mob-link" href="#ambiente">Espacio</a>
+    <a class="mob-link" href="#ubicacion">Ubicación</a>
   </div>
 </nav>
 
@@ -299,7 +413,7 @@ tailwind.config = {
   <div class="relative z-10 text-center px-4 max-w-4xl mx-auto flex flex-col items-center gap-6 pt-20">
     <div class="mb-2">
       <div class="text-[#D4AF37] font-label-sm tracking-[.3em] uppercase text-sm mb-3" style="font-family:'Plus Jakarta Sans',sans-serif;">✦ Tradición y Costumbres ✦</div>
-      <h1 class="font-headline-xl text-white text-6xl md:text-8xl drop-shadow-lg" style="font-family:'Noto Serif',serif; text-shadow:0 2px 24px rgba(0,0,0,0.6);">Los Carmelos</h1>
+      <h1 class="hero-title font-headline-xl text-white text-4xl sm:text-6xl md:text-8xl drop-shadow-lg" style="font-family:'Noto Serif',serif; text-shadow:0 2px 24px rgba(0,0,0,0.6);">Los Carmelos</h1>
     </div>
     <p class="text-white/85 text-xl md:text-2xl max-w-2xl font-light tracking-wide" style="font-family:'Noto Serif',serif; font-style:italic;">El Auténtico Legado de la Picantería Arequipeña</p>
     <!-- Gold rule -->
@@ -600,7 +714,7 @@ tailwind.config = {
     </div>
 
     <!-- Mosaico de fotos -->
-    <div style="display:grid; grid-template-columns:2fr 1fr 1fr; grid-template-rows:320px 320px; gap:8px;">
+    <div class="gallery-grid" style="display:grid; grid-template-columns:2fr 1fr 1fr; grid-template-rows:320px 320px; gap:8px;">
 
       <!-- Foto 1: entrada principal — ocupa 2 filas a la izquierda -->
       <div class="gallery-cell" style="grid-column:1; grid-row:1/3;">
@@ -785,6 +899,31 @@ tailwind.config = {
   sections.forEach(function (id) {
     var el = document.getElementById(id);
     if (el) observer.observe(el);
+  });
+})();
+
+// ── Hamburger mobile nav ──
+(function () {
+  var toggle = document.getElementById('menu-toggle');
+  var mobileNav = document.getElementById('mobile-nav');
+  if (!toggle || !mobileNav) return;
+  toggle.addEventListener('click', function () {
+    var isOpen = !mobileNav.classList.contains('hidden');
+    mobileNav.classList.toggle('hidden');
+    toggle.setAttribute('aria-expanded', String(!isOpen));
+  });
+  mobileNav.querySelectorAll('.mob-link').forEach(function (link) {
+    link.addEventListener('click', function () {
+      mobileNav.classList.add('hidden');
+      toggle.setAttribute('aria-expanded', 'false');
+    });
+  });
+  // Sync active state with scrollspy
+  var origSetActive = window.__setActive;
+  document.addEventListener('navActiveChange', function (e) {
+    mobileNav.querySelectorAll('.mob-link').forEach(function (l) { l.classList.remove('active'); });
+    var active = mobileNav.querySelector('.mob-link[href="#' + e.detail + '"]');
+    if (active) active.classList.add('active');
   });
 })();
 
